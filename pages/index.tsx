@@ -5,8 +5,8 @@ import { getMyPost } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 import { GetStaticProps } from 'next' //tsx
-import Code from "../components/Code"
-import codeStyles from '../styles/prism.module.css'
+import CodeComponent from "../components/CodeComponent"
+
 
 export default function Home({
   getAllMyPost
@@ -49,7 +49,7 @@ export default function Home({
 
       <pre className="codePrism">
 
-<Code code={code} language="javascript" />
+<CodeComponent code={code} language="javascript" />
 
 </pre>
     </Layout>

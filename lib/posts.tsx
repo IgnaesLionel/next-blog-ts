@@ -36,10 +36,10 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllPostIds() {
-  console.log("passé par getAllpostIds")
+
+
+/* export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
-  console.log(fileNames)
   return fileNames.map(fileName => {
     return {
       params: {
@@ -47,15 +47,15 @@ export function getAllPostIds() {
       }
     }
   })
-}
+} */
 
-export async function getAllPostIds2() {
+export async function getAllPostIds() {
   const data = await fetch("http://3.80.68.190:8055/items/Post/").then((r) =>
   r.json()
   );
 
 
-  const paths = data.data.map((post) => ({
+  const paths = data.data.map((post:any) => ({
     params: { id: post.url },
   }));
 
@@ -84,23 +84,22 @@ export async function getPostData(id: string) {
   }
 }
 
-
-
-
 export async function getMyPost() {
   const getdata = await fetch("http://3.80.68.190:8055/items/Post/")
   const response = await getdata.json()
-
-
   return response
 }
 
 export async function getMyPostData(url: string) {
-
   const getdata = await fetch(`http://3.80.68.190:8055/items/Post?filter[url][_eq]=${url}`)
+  const data = await getdata.json()
+  return data.data
+}
 
-  const response = await getdata.json()
-
-
-  return response
+export async function markdownToHtml(markdown:string){ 
+  const markdownToHtml = await remark()
+  .use(html)
+  .process(markdown)
+  const contentHtml =  markdownToHtml.toString()
+return {contentHtml}
 }

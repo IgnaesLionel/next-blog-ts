@@ -3,7 +3,7 @@ import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 
 
-export default function code({ code, language }:{code:string, language:string}) {
+export default function CodeComponent({ code, language }:{code:string, language:string}) {
   useEffect(() => {
     Prism.highlightAll();
   }, []);

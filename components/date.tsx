@@ -4,7 +4,6 @@ import fr from "date-fns/locale/fr";
 
 export default function Date({ dateString }: { dateString: string }) {
   const date = parseISO(dateString);
-  console.log(date)
 
   return (
     <time dateTime={dateString}>
