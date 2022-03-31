@@ -3,16 +3,17 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { Text } from "@chakra-ui/react";
 
 const name = "Ignaes Lionel";
 export const siteTitle = "Ignaes Lionel";
 
 export default function Layout({
   children,
-  home
+  home,
 }: {
-  children: React.ReactNode
-  home?: boolean
+  children: React.ReactNode;
+  home?: boolean;
 }) {
   return (
     <div className={styles.container}>
@@ -42,7 +43,14 @@ export default function Layout({
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <Text
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgClip="text"
+              fontSize="6xl"
+              fontWeight="extrabold"
+            >
+              {name}
+            </Text>
           </>
         ) : (
           <>
