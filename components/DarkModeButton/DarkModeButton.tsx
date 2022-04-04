@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Box, useColorMode } from "@chakra-ui/react";
 
 const DarkModeButton = () => {
-  const [darkModeIcon, setDarkModeIcon] = useState(true);
+  const [darkModeIcon, setDarkModeIcon] = useState(false);
   const { toggleColorMode } = useColorMode();
 
   const darkIcon = (
