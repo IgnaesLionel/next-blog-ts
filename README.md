@@ -1,1 +1,2 @@
-Portfolio : Ignaes Lionel
+Portfolio MVP : Ignaes Lionel
+ver : 0.1
