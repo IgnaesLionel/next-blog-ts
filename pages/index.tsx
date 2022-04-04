@@ -9,6 +9,7 @@ import Header from "../components/Header/Header";
 import MyWork from "../components/MyWork/MyWork";
 import MyBlog from "../components/MyBlog/MyBlog";
 import ContactMe from "../components/ContactMe/ContactMe";
+import { FooterWithSocialIcons } from "../components/FooterWithSocialIcons/FooterWithSocialIcons";
 
 export default function Home({
   getAllMyPost,
@@ -44,6 +45,7 @@ export default function Home({
         <MyWork />
         <ContactMe />
         <MyBlog />
+        <FooterWithSocialIcons />
 
         {/*     <Image
               priority
