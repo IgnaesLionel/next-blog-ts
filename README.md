@@ -1,2 +1,2 @@
 Portfolio MVP : Ignaes Lionel
-ver : 0.1
+ver : 0.2
