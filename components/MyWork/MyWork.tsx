@@ -5,6 +5,7 @@ import {
   Text,
   useColorModeValue,
   Button,
+  HStack,
 } from "@chakra-ui/react";
 import MyWorkCard from "../MyWorkCard/MyWorkCard";
 import Link from "next/link";
@@ -32,13 +33,15 @@ const MyWork = () => {
           <MyWorkCard />
           <MyWorkCard />
         </SimpleGrid>
-        <Button>
-          <Link href="/blog">
-            <a>
-              <Text fontSize="15px">more projects...</Text>
-            </a>
-          </Link>
-        </Button>
+        <HStack justifyContent="right">
+          <Button my="10px" mx="30px">
+            <Link href="/blog">
+              <a>
+                <Text fontSize="15px">more projects...</Text>
+              </a>
+            </Link>
+          </Button>
+        </HStack>
       </Box>
     </div>
   );

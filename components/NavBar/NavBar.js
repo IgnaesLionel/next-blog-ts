@@ -1,12 +1,22 @@
 import React from "react";
-import { Text, HStack, Container } from "@chakra-ui/react";
+import { Text, HStack, Container, useColorModeValue } from "@chakra-ui/react";
 import Link from "next/link";
 import DarkModeButton from "../DarkModeButton/DarkModeButton";
 const NavBar = ({ children }) => {
+  const bgColor = useColorModeValue("#50a0eb", "#054690");
+  const textColor = useColorModeValue("black", "white");
+
   return (
     <Container maxW="container.xl">
       <nav>
-        <HStack h="50px" bg={"blue.300"} justifyContent="center">
+        <HStack
+          h="50px"
+          bg={bgColor}
+          justifyContent="center"
+          color={textColor}
+          fontFamily="'Merienda One', sans-serif"
+          spacing={["15px", "30px", "60px"]}
+        >
           <Link href="/">
             <a>
               <Text fontSize="15px">Home</Text>

@@ -11,15 +11,15 @@ import {
 
 const Header = () => {
   const bgColor = useColorModeValue("#010101", "#b4ddff");
-  const bgColorWave1 = useColorModeValue("#ceeaff", "#056fc0");
-  const bgColorWave2 = useColorModeValue("#b4ddff", "#0668b8");
-  const bgColorWave3 = useColorModeValue("#9ad0ff", "#0661b0");
-  const bgColorWave4 = useColorModeValue("#80c3ff", "#065aa8");
-  const bgColorWave5 = useColorModeValue("#66b5ff", "#0653a0");
-  const bgColorWave6 = useColorModeValue("#49a7ff", "#064d98");
-  const bgColorWave7 = useColorModeValue("#2998ff", "#054690");
-  const bgColorWave8 = useColorModeValue("#0089ff", "#053f88");
-  const bgColorWave9 = useColorModeValue("#0078ff", "#043880");
+  const bgColorWave1 = useColorModeValue("#9ad0ff", "#056fc0");
+  const bgColorWave2 = useColorModeValue("#80c3ff", "#0668b8");
+  const bgColorWave3 = useColorModeValue("#66b5ff", "#0661b0");
+  const bgColorWave4 = useColorModeValue("#49a7ff", "#065aa8");
+  const bgColorWave5 = useColorModeValue("#2998ff", "#0653a0");
+  const bgColorWave6 = useColorModeValue("#0089ff", "#064d98");
+  const bgColorWave7 = useColorModeValue("#0078ff", "#054690");
+  const bgColorWave8 = useColorModeValue("#0066ff", "#053f88");
+  const bgColorWave9 = useColorModeValue("#0066ff", "#043880");
   const bgColorWave10 = useColorModeValue("#0066ff", "#033278");
 
   return (
@@ -31,49 +31,18 @@ const Header = () => {
       <Box bg={bgColor}>
         <Box w="full" pos="relative">
           <HStack pos="absolute" w="full">
-            <VStack pl="10px" w="50%" mt={[2, 10, 30]}>
-              <Text
-                textAlign="center"
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
-                bgClip="text"
-                fontSize={["4vw", "4vw", "3vw"]}
-                fontWeight="extrabold"
-                color={bgColor}
-              >
-                Hi, i'm Lionel.
-              </Text>
-              <Text
-                textAlign="center"
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
-                bgClip="text"
-                fontSize={["4vw", "4vw", "3vw"]}
-                fontWeight="extrabold"
-                color={bgColor}
-              >
-                I'm a helping people as freelance
-              </Text>
-
-              <Text
-                textAlign="center"
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
-                bgClip="text"
-                fontSize={["4vw", "4vw", "3vw"]}
-                fontWeight="extrabold"
-                color={bgColor}
-              >
-                to turn their ideas into
-              </Text>
-
-              <Text
-                textAlign="center"
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
-                bgClip="text"
-                fontSize={["4vw", "4vw", "3vw"]}
-                fontWeight="extrabold"
-                color={bgColor}
-              >
-                website and application
-              </Text>
+            <VStack
+              pl="10px"
+              w="50%"
+              mt={[2, 10, 30]}
+              fontFamily="'Merienda One', sans-serif"
+              fontSize={["4vw", "4vw", "2.5vw"]}
+              color={bgColor}
+            >
+              <Text textAlign="center">Hello, i am Lionel.</Text>
+              <Text textAlign="center">I help people to</Text>
+              <Text textAlign="center">turn their ideas into</Text>
+              <Text textAlign="center">websites and apps</Text>
             </VStack>
             <Box w="50%">
               <Center>
@@ -86,7 +55,7 @@ const Header = () => {
           </HStack>
         </Box>
 
-        <Box>
+        <Box maxHeight="350px">
           <svg
             id="visual"
             viewBox="0 0 900 600"

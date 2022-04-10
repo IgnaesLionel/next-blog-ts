@@ -104,7 +104,9 @@ const DarkModeButton = () => {
   };
 
   return (
-    <Button onClick={handleClick}>{darkModeIcon ? lightIcon : darkIcon}</Button>
+    <Button color="black" variant="link" onClick={handleClick}>
+      {darkModeIcon ? lightIcon : darkIcon}
+    </Button>
   );
 };
 

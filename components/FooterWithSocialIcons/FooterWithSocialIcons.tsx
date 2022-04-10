@@ -1,19 +1,25 @@
 import {
   ButtonGroup,
-  Container,
+  Box,
   IconButton,
   Stack,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import * as React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Logo } from "./Logo";
 
-export const FooterWithSocialIcons = () => (
-  <Container as="footer" role="contentinfo" py={{ base: "12", md: "16" }}>
-    <Stack spacing={{ base: "4", md: "5" }}>
-      <Stack justify="space-between" direction="row" align="center">
-        <Logo />
+export const FooterWithSocialIcons = () => {
+  const bgColor = useColorModeValue("#0066FF", "#033278");
+  const textColor = useColorModeValue("black", "white");
+  return (
+    <Box
+      bg={bgColor}
+      as="footer"
+      role="contentinfo"
+      py={{ base: "12", md: "16" }}
+    >
+      <Stack spacing={{ base: "4", md: "4" }}>
         <ButtonGroup variant="ghost">
           <IconButton
             as="a"
@@ -34,10 +40,11 @@ export const FooterWithSocialIcons = () => (
             icon={<FaTwitter fontSize="1.25rem" />}
           />
         </ButtonGroup>
+
+        <Text fontSize="sm" color="subtle">
+          &copy; {new Date().getFullYear()} Ignaes Lionel. All rights reserved.
+        </Text>
       </Stack>
-      <Text fontSize="sm" color="subtle">
-        &copy; {new Date().getFullYear()} Ignaes Lionel. All rights reserved.
-      </Text>
-    </Stack>
-  </Container>
-);
+    </Box>
+  );
+};

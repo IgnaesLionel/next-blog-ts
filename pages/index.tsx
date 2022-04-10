@@ -19,13 +19,20 @@ export default function Home({
     titre: string;
     id: number;
     url: string;
-    code_1: string;
+    code_1: string | null;
+    code_2: string | null;
+    code_3: string | null;
+    markup_1: string | null;
+    markup_2: string | null;
+    markup_3: string | null;
   }[];
 }) {
-  const bgColor = useColorModeValue("#black", "#b4ddff");
+  const bgColor = useColorModeValue("white", "white");
+
+  const slicedPost = getAllMyPost.slice(Math.max(getAllMyPost.length - 4, 1));
 
   return (
-    <Box bg={bgColor}>
+    <Box>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
@@ -44,7 +51,7 @@ export default function Home({
         <Header />
         <MyWork />
         <ContactMe />
-        <MyBlog />
+        <MyBlog data={slicedPost}></MyBlog>
         <FooterWithSocialIcons />
 
         {/*     <Image
