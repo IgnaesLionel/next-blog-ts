@@ -12,6 +12,7 @@ import MyBlogCard from "../MyBlogCard/MyBlogCard";
 
 const MyBlog = ({
   data,
+  host,
 }: {
   data: {
     id: number;
@@ -24,7 +25,9 @@ const MyBlog = ({
     markup_1: string | null;
     markup_2: string | null;
     markup_3: string | null;
+    Preview: string | null;
   }[];
+  host: string;
 }) => {
   const bgColor = useColorModeValue("#0066ff", "#033278");
   const txtColor = useColorModeValue("#010101", "#b4ddff");
@@ -46,7 +49,7 @@ const MyBlog = ({
 
         <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
           {data.map((data) => (
-            <MyBlogCard key={data.id} data={data} />
+            <MyBlogCard key={data.id} data={data} host={host} />
           ))}
         </SimpleGrid>
 

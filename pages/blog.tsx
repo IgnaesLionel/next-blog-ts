@@ -5,40 +5,48 @@ import { getMyPost } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import { GetStaticProps } from "next"; //tsx
+import MyBlogCard from "../components/MyBlogCard/MyBlogCard";
+import {
+  Box,
+  SimpleGrid,
+  Text,
+  useColorModeValue,
+  Button,
+  HStack,
+} from "@chakra-ui/react";
 
 export default function Blog({
   getAllMyPost,
+  host,
 }: {
   getAllMyPost: {
+    id: number;
     date: string;
     titre: string;
-    id: number;
     url: string;
-    code_1: string;
+    code_1: string | null;
+    code_2: string | null;
+    code_3: string | null;
+    markup_1: string;
+    markup_2: string | null;
+    markup_3: string | null;
+    Preview: string | null;
   }[];
+  host: string;
 }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}></section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {getAllMyPost.map(({ id, date, titre, url }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${url}`}>
-                <a>{titre}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+
+      <h2>Blog</h2>
+
+      <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
+        {getAllMyPost.map((data) => (
+          <MyBlogCard key={data.id} data={data} host={host} />
+        ))}
+      </SimpleGrid>
     </Layout>
   );
 }
@@ -49,6 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       getAllMyPost: getAllMyPost.data,
+      host: process.env.DB_HOST,
     },
   };
 };

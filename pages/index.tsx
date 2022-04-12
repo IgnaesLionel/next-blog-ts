@@ -13,6 +13,7 @@ import { FooterWithSocialIcons } from "../components/FooterWithSocialIcons/Foote
 
 export default function Home({
   getAllMyPost,
+  host,
 }: {
   getAllMyPost: {
     date: string;
@@ -25,9 +26,13 @@ export default function Home({
     markup_1: string | null;
     markup_2: string | null;
     markup_3: string | null;
+    Preview: string | null;
   }[];
+  host: string;
 }) {
   const bgColor = useColorModeValue("white", "white");
+
+  console.log(host);
 
   const slicedPost = getAllMyPost.slice(Math.max(getAllMyPost.length - 4, 1));
 
@@ -37,6 +42,7 @@ export default function Home({
         <Head>
           <title>{siteTitle}</title>
         </Head>
+
         {/*        <svg
           preserveAspectRatio="none"
           width="auto"
@@ -51,7 +57,7 @@ export default function Home({
         <Header />
         <MyWork />
         <ContactMe />
-        <MyBlog data={slicedPost}></MyBlog>
+        <MyBlog data={slicedPost} host={host}></MyBlog>
         <FooterWithSocialIcons />
 
         {/*     <Image
@@ -133,10 +139,10 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps = async () => {
   const getAllMyPost = await getMyPost();
-
   return {
     props: {
       getAllMyPost: getAllMyPost.data,
+      host: process.env.DB_HOST,
     },
   };
 };
