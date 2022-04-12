@@ -48,7 +48,7 @@ export function getSortedPostsData() {
 } */
 
 export async function getAllPostIds() {
-  const data = await fetch("http://54.147.191.233:8055/items/Post/").then((r) =>
+  const data = await fetch("http://34.234.92.155:8055/items/Post/").then((r) =>
     r.json()
   );
 
@@ -81,14 +81,14 @@ export async function getPostData(id: string) {
 }
 
 export async function getMyPost() {
-  const getdata = await fetch("http://54.147.191.233:8055/items/Post/");
+  const getdata = await fetch("http://34.234.92.155:8055/items/Post/");
   const response = await getdata.json();
   return response;
 }
 
 export async function getMyPostData(url: string) {
   const getdata = await fetch(
-    `http://54.147.191.233:8055/items/Post?filter[url][_eq]=${url}`
+    `http://34.234.92.155:8055/items/Post?filter[url][_eq]=${url}`
   );
   const data = await getdata.json();
   return data.data;
