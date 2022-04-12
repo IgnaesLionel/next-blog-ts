@@ -32,8 +32,6 @@ export default function Home({
 }) {
   const bgColor = useColorModeValue("white", "white");
 
-  console.log(host);
-
   const slicedPost = getAllMyPost.slice(Math.max(getAllMyPost.length - 4, 1));
 
   return (
