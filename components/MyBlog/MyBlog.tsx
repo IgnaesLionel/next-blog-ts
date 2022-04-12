@@ -22,7 +22,7 @@ const MyBlog = ({
     code_1: string | null;
     code_2: string | null;
     code_3: string | null;
-    markup_1: string | null;
+    markup_1: string;
     markup_2: string | null;
     markup_3: string | null;
     Preview: string | null;
