@@ -20,13 +20,11 @@ export default function Post({
     code_3: string;
   };
 }) {
-
   return (
     <Layout>
       <Head>
         <title> {data.titre} </title>
       </Head>
-      
 
       <article>
         <h1 className={utilStyles.headingXl}> {data.titre}</h1>
@@ -34,7 +32,7 @@ export default function Post({
           <Date dateString={data.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: data.markup_1 }} />
-       
+
         {data.code_1 ? (
           <pre className="codePrism">
             <CodeComponent code={data.code_1} language="javascript" />
@@ -73,18 +71,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postData = await getMyPostData(params?.id as string);
   const data = postData[0];
 
-  await markdownToHtml(data.markup_1).then(function(result){
-    data.markup_1 =result.contentHtml
-  }).then(function(result){console.log(data.markup_1)})
-  
-  await markdownToHtml(data.markup_2).then(function(result){
-    data.markup_2 =result.contentHtml
-  }).then(function(result){console.log(data.markup_2)})
-  
-  await markdownToHtml(data.markup_3).then(function(result){
-    data.markup_3 =result.contentHtml
-  }).then(function(result){console.log(data.markup_3)})
-  
+  await markdownToHtml(data.markup_1).then(function (result) {
+    data.markup_1 = result.contentHtml;
+  });
+
+  await markdownToHtml(data.markup_2).then(function (result) {
+    data.markup_2 = result.contentHtml;
+  });
+  await markdownToHtml(data.markup_3).then(function (result) {
+    data.markup_3 = result.contentHtml;
+  });
 
   return {
     props: {
