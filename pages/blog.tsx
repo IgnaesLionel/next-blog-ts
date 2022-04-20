@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { getMyPost } from "../lib/posts";
+import { getMyData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import { GetStaticProps } from "next"; //tsx
@@ -52,7 +52,7 @@ export default function Blog({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const getAllMyPost = await getMyPost();
+  const getAllMyPost = await getMyData("items/Post/");
 
   return {
     props: {

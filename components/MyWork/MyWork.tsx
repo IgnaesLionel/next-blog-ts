@@ -9,7 +9,20 @@ import {
 } from "@chakra-ui/react";
 import MyWorkCard from "../MyWorkCard/MyWorkCard";
 import Link from "next/link";
-const MyWork = () => {
+const MyWork = ({
+  data,
+  host,
+}: {
+  data: {
+    id: number;
+    resume: string;
+    titre: string;
+    tags: null;
+    image: null;
+    url: string;
+  }[];
+  host: string;
+}) => {
   const bgColor = useColorModeValue("#0066ff", "#033278");
   const txtColor = useColorModeValue("#010101", "#b4ddff");
   return (
@@ -28,10 +41,9 @@ const MyWork = () => {
         </Text>
 
         <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
-          <MyWorkCard />
-          <MyWorkCard />
-          <MyWorkCard />
-          <MyWorkCard />
+          {data.map((data) => (
+            <MyWorkCard key={data.id} data={data} host={host} />
+          ))}
         </SimpleGrid>
         <HStack justifyContent="right">
           <Button my="10px" mx="30px">

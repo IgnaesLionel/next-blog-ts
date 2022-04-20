@@ -39,8 +39,8 @@ export async function getPostData(id: string) {
   };
 }
 
-export async function getMyPost() {
-  const getdata = await fetch(`${process.env.DB_HOST}items/Post/`);
+export async function getMyData(url: string) {
+  const getdata = await fetch(`${process.env.DB_HOST}${url}`);
   const response = await getdata.json();
   return response;
 }
