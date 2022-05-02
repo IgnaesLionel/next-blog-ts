@@ -38,7 +38,14 @@ const MyBlogCard = ({
   const slicedMarkup = data.markup_1.substring(0, 50) + "...";
 
   return (
-    <Box m={"5px"} w="full">
+    <Box
+      m={"5px"}
+      w="full"
+      h="full"
+      display="flex"
+      flexGrow={1}
+      justifyContent="space-around"
+    >
       <Link href={`/posts/${data.url}`}>
         <Box
           p="5"
@@ -47,6 +54,10 @@ const MyBlogCard = ({
           borderRadius="10px"
           bg={bgColor}
           color={textColor}
+          display="flex"
+          flexDirection="column"
+          flexGrow={1}
+          justifyContent="space-around"
         >
           <small>
             <Date dateString={data.date} />

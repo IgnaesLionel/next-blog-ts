@@ -5,6 +5,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  Flex,
 } from "@chakra-ui/react";
 import * as React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -13,13 +14,13 @@ export const FooterWithSocialIcons = () => {
   const bgColor = useColorModeValue("#0066FF", "#033278");
   const textColor = useColorModeValue("black", "white");
   return (
-    <Box
+    <Flex
       bg={bgColor}
       as="footer"
       role="contentinfo"
       py={{ base: "12", md: "16" }}
     >
-      <Stack spacing={{ base: "4", md: "4" }}>
+      <Stack spacing={{ base: "4", md: "4" }} pl={"40px"}>
         <ButtonGroup variant="ghost">
           <IconButton
             as="a"
@@ -45,6 +46,6 @@ export const FooterWithSocialIcons = () => {
           &copy; {new Date().getFullYear()} Ignaes Lionel. All rights reserved.
         </Text>
       </Stack>
-    </Box>
+    </Flex>
   );
 };

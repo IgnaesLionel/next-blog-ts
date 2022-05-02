@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   VStack,
   HStack,
+  Img,
 } from "@chakra-ui/react";
 
 const Header = () => {
@@ -46,9 +47,9 @@ const Header = () => {
             </VStack>
             <Box w="50%">
               <Center>
-                <Box h="150px" w="150px" bg="red" textAlign="center">
+                <Box h="150px" w="250px">
                   {" "}
-                  XXX
+                  <Img src="https://st2.depositphotos.com/1898481/6448/i/600/depositphotos_64486573-stock-photo-people.jpg" />
                 </Box>
               </Center>
             </Box>

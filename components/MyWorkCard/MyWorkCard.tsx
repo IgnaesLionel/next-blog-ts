@@ -42,11 +42,7 @@ const MyWorkCard = ({
           bg={bgColor}
           color={textColor}
         >
-          <Image
-            borderRadius="md"
-            src="https://bit.ly/2k1H1t6"
-            src={`${host}assets/${data.image}.jpg`}
-          />
+          <Image borderRadius="md" src={`${host}assets/${data.image}.jpg`} />
 
           <Text mt={2} fontSize="10px" fontWeight="semibold" lineHeight="short">
             {data.titre}

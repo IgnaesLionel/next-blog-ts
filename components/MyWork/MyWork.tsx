@@ -30,6 +30,7 @@ const MyWork = ({
       <Box bg={bgColor}>
         <Text
           ml="30px"
+          mb="30px"
           textAlign="left"
           bgGradient="linear(to-l, #7928CA, #FF0080)"
           bgClip="text"
