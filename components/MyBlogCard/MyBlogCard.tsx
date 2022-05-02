@@ -50,6 +50,7 @@ const MyBlogCard = ({
         <Box
           p="5"
           maxW="280px"
+          minW="200px"
           borderWidth="2px"
           borderRadius="10px"
           bg={bgColor}
