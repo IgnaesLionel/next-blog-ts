@@ -28,6 +28,8 @@ const MyWorkCard = ({
 }) => {
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const textColor = useColorModeValue("black", "white");
+
+  console.log(data.image);
   return (
     <Box m={"5px"} w="full">
       <a href={`${data.url}`} target="_blank">
@@ -40,10 +42,14 @@ const MyWorkCard = ({
           bg={bgColor}
           color={textColor}
         >
-          <Image borderRadius="md" src="https://bit.ly/2k1H1t6" />
+          <Image
+            borderRadius="md"
+            src="https://bit.ly/2k1H1t6"
+            src={`${host}assets/${data.image}.jpg`}
+          />
 
           <Text mt={2} fontSize="10px" fontWeight="semibold" lineHeight="short">
-            {data.titre} {data.url}
+            {data.titre}
           </Text>
         </Box>
       </a>
