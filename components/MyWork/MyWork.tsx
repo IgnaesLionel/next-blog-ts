@@ -20,6 +20,7 @@ const MyWork = ({
     tags: null;
     image: null;
     url: string;
+    fullUrl: string;
   }[];
   host: string;
 }) => {
@@ -48,7 +49,7 @@ const MyWork = ({
         </SimpleGrid>
         <HStack justifyContent="right">
           <Button my="10px" mx="30px">
-            <Link href="/blog">
+            <Link href="/work">
               <a>
                 <Text fontSize="15px">more projects...</Text>
               </a>

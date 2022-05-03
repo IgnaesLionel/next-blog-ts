@@ -1,19 +1,9 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
 import { getMyData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
 import { GetStaticProps } from "next"; //tsx
 import MyBlogCard from "../components/MyBlogCard/MyBlogCard";
-import {
-  Box,
-  SimpleGrid,
-  Text,
-  useColorModeValue,
-  Button,
-  HStack,
-} from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 
 export default function Blog({
   getAllMyPost,
@@ -40,7 +30,7 @@ export default function Blog({
         <title>{siteTitle}</title>
       </Head>
 
-      <h2>Blog</h2>
+      <h2>my blog articles</h2>
 
       <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
         {getAllMyPost.map((data) => (

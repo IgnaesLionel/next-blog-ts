@@ -40,10 +40,10 @@ const Header = () => {
               fontSize={["4vw", "4vw", "2.5vw"]}
               color={bgColor}
             >
-              <Text textAlign="center">Hello, i am Lionel.</Text>
-              <Text textAlign="center">I help people to</Text>
-              <Text textAlign="center">turn their ideas into</Text>
-              <Text textAlign="center">websites and apps</Text>
+              <Text textAlign="center">Bonjour, je suis Lionel.</Text>
+              <Text textAlign="center">J'aide les gens à</Text>
+              <Text textAlign="center">transformer leurs idées en</Text>
+              <Text textAlign="center">site internet et applications</Text>
             </VStack>
             <Box w="50%">
               <Center>

@@ -46,7 +46,7 @@ const MyBlogCard = ({
       flexGrow={1}
       justifyContent="space-around"
     >
-      <Link href={`/posts/${data.url}`}>
+      <Link href={`/blog/${data.url}`}>
         <Box
           p="5"
           maxW="280px"

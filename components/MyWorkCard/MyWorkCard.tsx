@@ -1,16 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import {
-  Box,
-  SimpleGrid,
-  Text,
-  useColorModeValue,
-  Center,
-  Flex,
-  Badge,
-  Image,
-  background,
-} from "@chakra-ui/react";
+import { Box, Text, useColorModeValue, Image } from "@chakra-ui/react";
 
 const MyWorkCard = ({
   data,
@@ -23,16 +13,16 @@ const MyWorkCard = ({
     tags: null;
     image: null;
     url: string;
+    fullUrl: string;
   };
   host: string;
 }) => {
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const textColor = useColorModeValue("black", "white");
 
-  console.log(data.image);
   return (
     <Box m={"5px"} w="full">
-      <a href={`${data.url}`} target="_blank">
+      <Link href={`/work/${data.url}`}>
         <Box
           p="5"
           maxW="320px"
@@ -48,7 +38,7 @@ const MyWorkCard = ({
             {data.titre}
           </Text>
         </Box>
-      </a>
+      </Link>
     </Box>
   );
 };

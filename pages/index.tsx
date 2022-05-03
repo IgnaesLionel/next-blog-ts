@@ -37,11 +37,14 @@ export default function Home({
     tags: null;
     image: null;
     url: string;
+    fullUrl: string;
+    markdown_1: string | null;
+    markdown_2: string | null;
+    markdown_3: string | null;
   }[];
 }) {
   const bgColor = useColorModeValue("white", "white");
 
-  console.log(getAllMyWork);
   const slicedPost = getAllMyPost.slice(Math.max(getAllMyPost.length - 4, 0));
   const slicedWork = getAllMyWork.slice(Math.max(getAllMyWork.length - 4, 0));
 
