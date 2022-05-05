@@ -5,6 +5,8 @@ import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next"; //tsx
 import CodeComponent from "../../components/CodeComponent";
+import Markdown from "markdown-to-jsx";
+import { Heading, Center, Box } from "@chakra-ui/react";
 
 export default function Post({
   data,
@@ -27,26 +29,35 @@ export default function Post({
       </Head>
 
       <article>
-        <h1 className={utilStyles.headingXl}> {data.titre}</h1>
+        <Center h="100px" color="white">
+          <Heading as="h1" size="2xl">
+            {data.titre}
+          </Heading>
+        </Center>
         <div className={utilStyles.lightText}>
           <Date dateString={data.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: data.markup_1 }} />
-
-        {data.code_1 ? (
-          <pre className="codePrism">
-            <CodeComponent code={data.code_1} language="javascript" />
-          </pre>
-        ) : null}
-
-        <div dangerouslySetInnerHTML={{ __html: data.markup_2 }} />
-
+        <Box pl="50px" mt="50px">
+          {data.markup_1 ? <Markdown>{data.markup_1}</Markdown> : null}
+        </Box>
+        <Box pl="90px" pr="90px">
+          {data.code_1 ? (
+            <pre className="codePrism">
+              <CodeComponent code={data.code_1} language="javascript" />
+            </pre>
+          ) : null}
+        </Box>
+        <Box pl="50px">
+          {data.markup_2 ? <Markdown>{data.markup_2}</Markdown> : null}
+        </Box>
         {data.code_2 ? (
           <pre className="codePrism">
             <CodeComponent code={data.code_2} language="javascript" />
           </pre>
         ) : null}
-        <div dangerouslySetInnerHTML={{ __html: data.markup_3 }} />
+        <Box pl="50px">
+          {data.markup_3 ? <Markdown>{data.markup_3}</Markdown> : null}
+        </Box>
         {data.code_3 ? (
           <pre className="codePrism">
             <CodeComponent code={data.code_3} language="javascript" />
@@ -69,17 +80,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postData = await getMyPostData(params?.id as string);
   const data = postData[0];
-
-  await markdownToHtml(data.markup_1).then(function (result) {
-    data.markup_1 = result.contentHtml;
-  });
-
-  await markdownToHtml(data.markup_2).then(function (result) {
-    data.markup_2 = result.contentHtml;
-  });
-  await markdownToHtml(data.markup_3).then(function (result) {
-    data.markup_3 = result.contentHtml;
-  });
 
   return {
     props: {

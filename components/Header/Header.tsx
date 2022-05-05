@@ -37,13 +37,13 @@ const Header = () => {
               w="50%"
               mt={[2, 10, 30]}
               fontFamily="'Merienda One', sans-serif"
-              fontSize={["4vw", "4vw", "2.5vw"]}
+              fontSize={["4vw", "4vw", "2.0vw"]}
               color={bgColor}
             >
-              <Text textAlign="center">Bonjour, je suis Lionel.</Text>
-              <Text textAlign="center">J'aide les gens à</Text>
-              <Text textAlign="center">transformer leurs idées en</Text>
-              <Text textAlign="center">site internet et applications</Text>
+              <Text textAlign="center">Hi, i am Lionel.</Text>
+              <Text textAlign="center">I help people </Text>
+              <Text textAlign="center">turning their ideas into</Text>
+              <Text textAlign="center">a website or an application</Text>
             </VStack>
             <Box w="50%">
               <Center>

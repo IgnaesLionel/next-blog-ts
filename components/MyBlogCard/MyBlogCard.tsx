@@ -1,17 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Date from "../../components/date";
-import {
-  Box,
-  SimpleGrid,
-  Text,
-  useColorModeValue,
-  Center,
-  Flex,
-  Badge,
-  Image,
-  background,
-} from "@chakra-ui/react";
+import { Box, Text, useColorModeValue, Image } from "@chakra-ui/react";
 
 const MyBlogCard = ({
   data,

@@ -1,16 +1,17 @@
 import Layout from "../../components/layout";
 import { getMyWorkData, getAllWorkIds, markdownToHtml } from "../../lib/posts";
 import Head from "next/head";
-import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next"; //tsx
+import Markdown from "markdown-to-jsx";
+import { Heading, HStack, Box, Button, Flex } from "@chakra-ui/react";
+import React from "react";
 
 export default function Post({
   data,
 }: {
   data: {
     titre: string;
-
     markdown_1: string;
     markdown_2: string;
     markdown_3: string;
@@ -19,13 +20,39 @@ export default function Post({
   return (
     <Layout>
       <Head>
-        <title> {data.titre} </title>
+        <title> Projet : {data.titre} </title>
       </Head>
 
       <article>
-        <h1 className={utilStyles.headingXl}> {data.titre}</h1>
-        <div className={utilStyles.lightText}></div>
-        <div dangerouslySetInnerHTML={{ __html: data.markdown_1 }} />
+        <Heading as="h1" textAlign="center" className={utilStyles.headingXl}>
+          Projet : {data.titre}
+        </Heading>
+        <Flex w="full" justifyContent={"right"}>
+          <Button
+            onClick={() => {
+              console.log("test");
+            }}
+          >
+            let's explore it
+          </Button>
+        </Flex>
+        {data.markdown_1 ? (
+          <Box m="100">
+            <Markdown>{data.markdown_1}</Markdown>
+          </Box>
+        ) : null}
+
+        {data.markdown_2 ? (
+          <Box m="100">
+            <Markdown>{data.markdown_2}</Markdown>
+          </Box>
+        ) : null}
+        <HStack p="30" justifyContent={"center"}>
+          <Markdown
+            children={data.markdown_3}
+            options={{ wrapper: React.Fragment }}
+          />
+        </HStack>
       </article>
     </Layout>
   );
@@ -43,17 +70,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postData = await getMyWorkData(params?.id as string);
   const data = postData[0];
-
-  await markdownToHtml(data.markdown_1).then(function (result) {
-    data.markdown_1 = result.contentHtml;
-  });
-
-  await markdownToHtml(data.markdown_2).then(function (result) {
-    data.markdown_2 = result.contentHtml;
-  });
-  await markdownToHtml(data.markdown_3).then(function (result) {
-    data.markdown_3 = result.contentHtml;
-  });
 
   return {
     props: {
