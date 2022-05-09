@@ -27,15 +27,7 @@ export default function Post({
         <Heading as="h1" textAlign="center" className={utilStyles.headingXl}>
           Projet : {data.titre}
         </Heading>
-        <Flex w="full" justifyContent={"right"}>
-          <Button
-            onClick={() => {
-              console.log("test");
-            }}
-          >
-            let's explore it
-          </Button>
-        </Flex>
+        <Flex w="full" justifyContent={"right"}></Flex>
         {data.markdown_1 ? (
           <Box m="100">
             <Markdown>{data.markdown_1}</Markdown>
@@ -54,6 +46,13 @@ export default function Post({
           />
         </HStack>
       </article>
+      <Button
+        onClick={() => {
+          console.log("test");
+        }}
+      >
+        let's explore it
+      </Button>
     </Layout>
   );
 }

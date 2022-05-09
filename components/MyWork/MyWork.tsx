@@ -28,7 +28,20 @@ const MyWork = ({
   const txtColor = useColorModeValue("#010101", "#b4ddff");
   return (
     <div>
-      <Box bg={bgColor}>
+      <Box position="relative">
+        {/*         <Box
+          zIndex={0}
+          w="100%"
+          h="full"
+          top="0"
+          right="0"
+          left="0"
+          bottom="0"
+          opacity="0.1"
+          bgImage="url('/images/codebg.jpg')"
+          bgSize="cover"
+          position="absolute"
+        ></Box> */}
         <Text
           ml="30px"
           mb="30px"

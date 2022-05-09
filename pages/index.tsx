@@ -49,7 +49,7 @@ export default function Home({
   const slicedWork = getAllMyWork.slice(Math.max(getAllMyWork.length - 4, 0));
 
   return (
-    <Box>
+    <Box position="relative">
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
