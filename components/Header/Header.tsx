@@ -50,13 +50,16 @@ const Header = () => {
         </Text>
         <Text textAlign="center">I help people to</Text>
         <Text textAlign="center">convert their</Text>
-        <Box w="full" h="full">
+        <HStack w="full" h="full">
           <Center>
+            <Box h="20%" w="20%">
+              <Img src="../../images/portfolioBubble.png" />
+            </Box>
             <Box h="20%" w="20%">
               <Img src="https://st2.depositphotos.com/1898481/6448/i/600/depositphotos_64486573-stock-photo-people.jpg" />
             </Box>
           </Center>
-        </Box>
+        </HStack>
 
         <VStack
           pl="10px"
@@ -67,7 +70,6 @@ const Header = () => {
           color={bgColor}
         >
           <Text textAlign="center">ideas into reality</Text>
-          <Img src="../../images/portfolioBubble.png" />
         </VStack>
       </VStack>
     </Box>
