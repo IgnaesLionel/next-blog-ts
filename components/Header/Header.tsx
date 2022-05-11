@@ -58,7 +58,7 @@ const Header = () => {
           direction={["column", "column", "row"]}
         >
           <Box
-            h={["100px", "200px", "250px"]}
+            h={["100px", "170px", "250px"]}
             w={["100px", "200px", "250px"]}
             borderColor="red"
             borderWidth="1px"
@@ -232,45 +232,48 @@ const Header = () => {
           </Box>
           <Box
             position="relative"
-            h={["100px", "200px", "250px"]}
+            h={["100px", "170px", "250px"]}
             w={["100px", "200px", "250px"]}
             borderColor="red"
             borderWidth="1px"
             borderStyle="solid"
           >
-            <Flex justifyContent="center">
+            <VStack justifyContent="center">
               <Img
                 borderRadius="50%"
                 src="../../images/me.png"
                 w={["100px", "150px", "200px"]}
               />
-            </Flex>
-            <Text
-              textAlign="center"
-              bottom={["-15px", "-30px", "15px"]}
-              position="absolute"
-              w="full"
-              fontSize={["10px", "20px", "40px"]}
-              fontFamily="'Merienda One', sans-serif"
-            >
-              turn into
-            </Text>
+              <Text
+                textAlign="center"
+                bottom={["-15px", "-5px", "15px"]}
+                position="absolute"
+                w="full"
+                fontSize={["10px", "20px", "40px"]}
+                fontFamily="'Merienda One', sans-serif"
+              >
+                turn into
+              </Text>
+            </VStack>
           </Box>
 
           <Box
-            h={["100px", "200px", "230px"]}
-            w={["100px", "200px", "230px"]}
+            h={["100px", "200px", "250"]}
+            w={["100px", "200px", "250px"]}
             position="relative"
+            borderColor="red"
+            borderWidth="1px"
+            borderStyle="solid"
           >
             <Text
               position="absolute"
               w="full"
               textAlign="center"
-              bottom={["-15px", "-30px", "15px"]}
+              bottom={["+15px", "+30px", "+15px"]}
               fontSize={["10px", "20px", "40px"]}
               fontFamily="'Merienda One', sans-serif"
             >
-              concrete projects
+              real project
             </Text>
           </Box>
         </Flex>
