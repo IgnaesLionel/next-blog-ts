@@ -21,9 +21,34 @@ const Header = () => {
       overflow="hidden"
       display="inline-block"
     >
+      <Box
+        zIndex={0}
+        w="100%"
+        h="full"
+        top="0"
+        right="0"
+        left="0"
+        bottom="0"
+        opacity="0.051"
+        bgImage="url('/images/codebg.jpg')"
+        bgSize="cover"
+        position="absolute"
+      ></Box>
       <VStack w="full">
-        <Text textAlign="center">I help people to</Text>
-        <Text textAlign="center">convert their</Text>
+        <Text
+          fontFamily="'Merienda One', sans-serif"
+          fontSize={["20px", "30px", "40px"]}
+          textAlign="center"
+        >
+          Lionel Ignaes
+        </Text>
+        <Text
+          fontFamily="'Merienda One', sans-serif"
+          fontSize={["10px", "15px", "20px"]}
+          textAlign="center"
+        >
+          Software developer
+        </Text>
         <Flex
           w="full"
           h="full"
@@ -32,31 +57,25 @@ const Header = () => {
           alignItems={["center", "center", "center"]}
           direction={["column", "column", "row"]}
         >
-          <Box h={["100px", "200px", "250px"]} w={["100px", "200px", "250px"]}>
-            <Box
-              w="full"
-              position="relative"
-              borderStyle="solid"
-              borderWidth="1px"
-              borderColor="red"
-            >
+          <Box
+            h={["100px", "200px", "250px"]}
+            w={["100px", "200px", "250px"]}
+            borderColor="red"
+            borderWidth="1px"
+            borderStyle="solid"
+          >
+            <Box w="full" position="relative">
               <Text
-                bottom="-50px"
+                bottom={["-15px", "-30px", "-50px"]}
                 position="absolute"
                 w="full"
                 textAlign="center"
                 fontSize={["10px", "20px", "40px"]}
+                fontFamily="'Merienda One', sans-serif"
               >
                 Your ideas
               </Text>
-              <Flex
-                justifyContent="center"
-                alignItems="center"
-                w="full"
-                borderStyle="solid"
-                borderWidth="1px"
-                borderColor="red"
-              >
+              <Flex justifyContent="center" alignItems="center" w="full">
                 <Img
                   src="../../images/brain.png"
                   w={["100px", "150px", "200px"]}
@@ -86,7 +105,7 @@ const Header = () => {
                 top={["0px", "-1px", "-5px"]}
                 left={["37px", "79px", "97px"]}
                 fontSize={["12px", "20px", "30px"]}
-                fontFamily="mono"
+                fontFamily="Mono, sans-serif"
                 className="spin"
                 color="white"
               >
@@ -94,10 +113,10 @@ const Header = () => {
               </Box>
               <Box
                 position="absolute"
-                top="26px"
-                left="57px"
-                fontSize="0.8rem"
-                fontFamily="mono"
+                top={["14px", "24px", "27px"]}
+                left={["13px", "42px", "45px"]}
+                fontSize={["7px", "10px", "18px"]}
+                fontFamily="'Merienda One', sans-serif"
                 color="white"
                 className="rotate-45"
               >
@@ -109,7 +128,7 @@ const Header = () => {
                 top={["36px", "55px", "75px"]}
                 left={["7px", "33px", "35px"]}
                 fontSize={["5px", "9px", "11px"]}
-                fontFamily="mono"
+                fontFamily="'Merienda One', sans-serif"
                 color="white"
                 className="rotate45"
               >
@@ -120,7 +139,7 @@ const Header = () => {
                 top={["37px", "55px", "75px"]}
                 left={["78px", "140px", "180px"]}
                 fontSize={["5px", "9px", "11px"]}
-                fontFamily="mono"
+                fontFamily="'Merienda One', sans-serif"
                 color="white"
               >
                 E=mc²
@@ -152,39 +171,51 @@ const Header = () => {
               >
                 <Img className="spinReverse" src="../../images/roue.png" />
               </Box>
-              <Box position="absolute" top="90px" left="132px" h="6px" w="6px">
+              <Box
+                position="absolute"
+                top={["43px", "68px", "90px"]}
+                left={["53px", "105px", "132px"]}
+                h={["3px", "5px", "6px"]}
+                w={["3px", "5px", "6px"]}
+              >
                 <Img className="hshake" src="../../images/musique1.png" />
               </Box>
               <Box
                 position="absolute"
-                top="100px"
-                left="140px"
-                h="12px"
-                w="12px"
+                top={["48px", "75px", "100px"]}
+                left={["56px", "113px", "140px"]}
+                h={["7px", "10px", "12px"]}
+                w={["7px", "10px", "12px"]}
               >
                 <Img
                   className="hshakeDelayed"
                   src="../../images/musique2.png"
                 />
               </Box>
-              <Box position="absolute" top="50px" left="140px" h="8px" w="8px">
+              <Box
+                position="absolute"
+                top={["25px", "40px", "50px"]}
+                left={["58px", "110px", "140px"]}
+                h={["4px", "6px", "8px"]}
+                w={["4px", "6px", "8px"]}
+              >
                 <Img className="hshakeDelayed" src="../../images/intero.png" />
               </Box>
               <Box
                 position="absolute"
-                top="140px"
-                left="143px"
-                h="18px"
-                w="18px"
+                top={["70px", "105px", "140px"]}
+                left={["58px", "113px", "143px"]}
+                h={["10px", "14px", "18px"]}
+                w={["10px", "14px", "18px"]}
               >
                 <Img className="ghostlyShake" src="../../images/lamp.png" />
               </Box>
               <Box
                 position="absolute"
-                top="140px"
-                left="143px"
-                h="18px"
-                w="18px"
+                top={["70px", "105px", "140px"]}
+                left={["58px", "113px", "143px"]}
+                h={["10px", "14px", "18px"]}
+                w={["10px", "14px", "18px"]}
               >
                 <Img className="ghostlyShake2" src="../../images/lamp2.png" />
               </Box>
@@ -199,23 +230,47 @@ const Header = () => {
               </Box>
             </Box>
           </Box>
-          <Box h={["100px", "200px", "250px"]} w={["100px", "200px", "250px"]}>
-            <Img src="../../images/me.png" />
+          <Box
+            position="relative"
+            h={["100px", "200px", "250px"]}
+            w={["100px", "200px", "250px"]}
+            borderColor="red"
+            borderWidth="1px"
+            borderStyle="solid"
+          >
+            <Flex justifyContent="center">
+              <Img
+                borderRadius="50%"
+                src="../../images/me.png"
+                w={["100px", "150px", "200px"]}
+              />
+            </Flex>
+            <Text
+              textAlign="center"
+              bottom={["-15px", "-30px", "15px"]}
+              position="absolute"
+              w="full"
+              fontSize={["10px", "20px", "40px"]}
+              fontFamily="'Merienda One', sans-serif"
+            >
+              turn into
+            </Text>
           </Box>
 
           <Box
-            h={["100px", "200px", "250px"]}
-            w={["100px", "200px", "250px"]}
+            h={["100px", "200px", "230px"]}
+            w={["100px", "200px", "230px"]}
             position="relative"
           >
             <Text
-              bottom="0px"
               position="absolute"
               w="full"
               textAlign="center"
+              bottom={["-15px", "-30px", "15px"]}
               fontSize={["10px", "20px", "40px"]}
+              fontFamily="'Merienda One', sans-serif"
             >
-              Real Projet
+              concrete projects
             </Text>
           </Box>
         </Flex>
@@ -227,23 +282,7 @@ const Header = () => {
           fontFamily="'Merienda One', sans-serif"
           fontSize={["4vw", "4vw", "2.0vw"]}
           color={bgColor}
-        >
-          <Text textAlign="center">ideas into reality</Text>
-        </VStack>
-        <Text
-          fontFamily="'Merienda One', sans-serif"
-          fontSize={["4vw", "4vw", "2.0vw"]}
-          textAlign="center"
-        >
-          Lionel Ignaes
-        </Text>
-        <Text
-          fontFamily="'Merienda One', sans-serif"
-          fontSize={["4vw", "4vw", "2.0vw"]}
-          textAlign="center"
-        >
-          Software developer
-        </Text>
+        ></VStack>
       </VStack>
     </Box>
   );

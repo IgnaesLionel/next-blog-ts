@@ -11,7 +11,7 @@ import * as React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export const FooterWithSocialIcons = () => {
-  const bgColor = useColorModeValue("#0066FF", "#033278");
+  const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const textColor = useColorModeValue("black", "white");
   return (
     <Flex

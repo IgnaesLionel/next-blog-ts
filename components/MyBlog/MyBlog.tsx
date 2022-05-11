@@ -29,7 +29,7 @@ const MyBlog = ({
   }[];
   host: string;
 }) => {
-  const bgColor = useColorModeValue("#0066ff", "#033278");
+  const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const txtColor = useColorModeValue("#010101", "#b4ddff");
 
   return (

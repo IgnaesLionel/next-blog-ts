@@ -24,24 +24,11 @@ const MyWork = ({
   }[];
   host: string;
 }) => {
-  const bgColor = useColorModeValue("#0066ff", "#033278");
+  const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const txtColor = useColorModeValue("#010101", "#b4ddff");
   return (
     <div>
-      <Box position="relative">
-        {/*         <Box
-          zIndex={0}
-          w="100%"
-          h="full"
-          top="0"
-          right="0"
-          left="0"
-          bottom="0"
-          opacity="0.1"
-          bgImage="url('/images/codebg.jpg')"
-          bgSize="cover"
-          position="absolute"
-        ></Box> */}
+      <Box position="relative" bgColor={bgColor}>
         <Text
           ml="30px"
           mb="30px"
