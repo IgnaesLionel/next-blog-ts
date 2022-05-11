@@ -1,4 +1,5 @@
 import "../styles/global.css";
+import "../styles/animation.css";
 import { AppProps } from "next/app"; //tsx
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import NavBar from "../components/NavBar/NavBar";
