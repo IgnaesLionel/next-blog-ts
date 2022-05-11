@@ -3,10 +3,8 @@ import Head from "next/head";
 import {
   Text,
   Box,
-  Center,
   useColorModeValue,
   VStack,
-  HStack,
   Img,
   Flex,
 } from "@chakra-ui/react";
@@ -14,6 +12,7 @@ import {
 const Header = () => {
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
 
+  console.log("loaded");
   return (
     <Box
       bg={bgColor}
@@ -66,27 +65,27 @@ const Header = () => {
 
               <Box
                 position="absolute"
-                top="155px"
-                left="64px"
-                h="17px"
-                w="11px"
+                top={["63px", "100px", "130px"]}
+                left={["11px", "39px", "45px"]}
+                h={["10px", "17px", "17px"]}
+                w={["7px", "11px", "13px"]}
               >
                 <Img className="hourglass" src="../../images/sablier.png" />
               </Box>
               <Box
                 position="absolute"
-                top="90px"
-                left="105px"
-                h="20px"
-                w="15px"
+                top={["23px", "38px", "50px"]}
+                left={["37px", "82px", "105px"]}
+                h={["14px", "17px", "20px"]}
+                w={["10px", "13px", "15px"]}
               >
                 <Img className="spinReverse" src="../../images/circle.png" />
               </Box>
               <Box
                 position="absolute"
-                top="-12px"
-                left="115px"
-                fontSize="50px"
+                top={["0px", "-1px", "-5px"]}
+                left={["37px", "79px", "97px"]}
+                fontSize={["12px", "20px", "30px"]}
                 fontFamily="mono"
                 className="spin"
                 color="white"
@@ -95,8 +94,8 @@ const Header = () => {
               </Box>
               <Box
                 position="absolute"
-                top="76px"
-                left="65px"
+                top="26px"
+                left="57px"
                 fontSize="0.8rem"
                 fontFamily="mono"
                 color="white"
@@ -107,47 +106,58 @@ const Header = () => {
 
               <Box
                 position="absolute"
-                top="110px"
-                left="65px"
-                fontSize="0.6rem"
+                top={["36px", "55px", "75px"]}
+                left={["7px", "33px", "35px"]}
+                fontSize={["5px", "9px", "11px"]}
                 fontFamily="mono"
                 color="white"
+                className="rotate45"
               >
                 123
               </Box>
               <Box
                 position="absolute"
-                top="132px"
-                left="85px"
-                h="15px"
-                w="10px"
+                top={["37px", "55px", "75px"]}
+                left={["78px", "140px", "180px"]}
+                fontSize={["5px", "9px", "11px"]}
+                fontFamily="mono"
+                color="white"
+              >
+                E=mc²
+              </Box>
+              <Box
+                position="absolute"
+                top={["50.5px", "77px", "104px"]}
+                left={["25px", "63px", "72px"]}
+                h={["9px", "13px", "15px"]}
+                w={["5px", "8px", "10px"]}
               >
                 <Img className="vshake" src="../../images/fiole.png" />
               </Box>
               <Box
                 position="absolute"
-                top="168px"
-                left="85px"
-                h="18px"
-                w="18px"
+                top={["72px", "110px", "148px"]}
+                left={["28px", "64px", "79px"]}
+                h={["10px", "14px", "18px"]}
+                w={["10px", "14px", "18px"]}
               >
                 <Img className="spin" src="../../images/roue.png" />
               </Box>
               <Box
                 position="absolute"
-                top="158px"
-                left="96px"
-                h="13px"
-                w="13px"
+                top={["67px", "105px", "138px"]}
+                left={["35px", "75px", "90px"]}
+                h={["7px", "10px", "13px"]}
+                w={["7px", "10px", "13px"]}
               >
                 <Img className="spinReverse" src="../../images/roue.png" />
               </Box>
-              <Box position="absolute" top="120px" left="130px" h="6px" w="6px">
+              <Box position="absolute" top="90px" left="132px" h="6px" w="6px">
                 <Img className="hshake" src="../../images/musique1.png" />
               </Box>
               <Box
                 position="absolute"
-                top="130px"
+                top="100px"
                 left="140px"
                 h="12px"
                 w="12px"
@@ -157,13 +167,13 @@ const Header = () => {
                   src="../../images/musique2.png"
                 />
               </Box>
-              <Box position="absolute" top="90px" left="140px" h="8px" w="8px">
+              <Box position="absolute" top="50px" left="140px" h="8px" w="8px">
                 <Img className="hshakeDelayed" src="../../images/intero.png" />
               </Box>
               <Box
                 position="absolute"
-                top="160px"
-                left="138px"
+                top="140px"
+                left="143px"
                 h="18px"
                 w="18px"
               >
@@ -171,8 +181,8 @@ const Header = () => {
               </Box>
               <Box
                 position="absolute"
-                top="160px"
-                left="138px"
+                top="140px"
+                left="143px"
                 h="18px"
                 w="18px"
               >
@@ -181,7 +191,7 @@ const Header = () => {
               <Box
                 position="absolute"
                 top="90px"
-                left="160px"
+                left="140px"
                 h="30px"
                 w="30px"
               >

@@ -158,3 +158,8 @@
 
     transform: rotate(-45deg) 
 }
+
+.rotate45{
+
+    transform: rotate(45deg) 
+}
