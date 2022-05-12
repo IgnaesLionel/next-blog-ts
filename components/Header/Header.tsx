@@ -57,6 +57,7 @@ const Header = () => {
                 <Img
                   src="../../images/brain.png"
                   w={["100px", "150px", "200px"]}
+                  alt="brain"
                 />
               </Flex>
 
@@ -66,6 +67,7 @@ const Header = () => {
                 w={["100px", "150px", "130px"]}
                 left="180px"
                 opacity={[0, 0, 1]}
+                alt="arrow"
               />
 
               <Box
@@ -75,7 +77,11 @@ const Header = () => {
                 h={["10px", "17px", "17px"]}
                 w={["7px", "11px", "13px"]}
               >
-                <Img className="hourglass" src="../../images/sablier.png" />
+                <Img
+                  className="hourglass"
+                  src="../../images/sablier.png"
+                  alt="hourglass"
+                />
               </Box>
               <Box
                 position="absolute"
@@ -84,7 +90,11 @@ const Header = () => {
                 h={["14px", "17px", "20px"]}
                 w={["10px", "13px", "15px"]}
               >
-                <Img className="spinReverse" src="../../images/circle.png" />
+                <Img
+                  className="spinReverse"
+                  src="../../images/circle.png"
+                  alt="round arrows"
+                />
               </Box>
               <Box
                 position="absolute"
@@ -137,7 +147,11 @@ const Header = () => {
                 h={["9px", "13px", "15px"]}
                 w={["5px", "8px", "10px"]}
               >
-                <Img className="vshake" src="../../images/fiole.png" />
+                <Img
+                  className="vshake"
+                  src="../../images/fiole.png"
+                  alt="flask"
+                />
               </Box>
               <Box
                 position="absolute"
@@ -146,7 +160,11 @@ const Header = () => {
                 h={["10px", "14px", "18px"]}
                 w={["10px", "14px", "18px"]}
               >
-                <Img className="spin" src="../../images/roue.png" />
+                <Img
+                  className="spin"
+                  src="../../images/roue.png"
+                  alt="mecanic wheel"
+                />
               </Box>
               <Box
                 position="absolute"
@@ -155,7 +173,11 @@ const Header = () => {
                 h={["7px", "10px", "13px"]}
                 w={["7px", "10px", "13px"]}
               >
-                <Img className="spinReverse" src="../../images/roue.png" />
+                <Img
+                  className="spinReverse"
+                  src="../../images/roue.png"
+                  alt="mecanic wheel"
+                />
               </Box>
               <Box
                 position="absolute"
@@ -164,7 +186,11 @@ const Header = () => {
                 h={["3px", "5px", "6px"]}
                 w={["3px", "5px", "6px"]}
               >
-                <Img className="hshake" src="../../images/musique1.png" />
+                <Img
+                  className="hshake"
+                  src="../../images/musique1.png"
+                  alt="music note"
+                />
               </Box>
               <Box
                 position="absolute"
@@ -176,6 +202,7 @@ const Header = () => {
                 <Img
                   className="hshakeDelayed"
                   src="../../images/musique2.png"
+                  alt="music note"
                 />
               </Box>
               <Box
@@ -185,7 +212,11 @@ const Header = () => {
                 h={["4px", "6px", "8px"]}
                 w={["4px", "6px", "8px"]}
               >
-                <Img className="hshakeDelayed" src="../../images/intero.png" />
+                <Img
+                  className="hshakeDelayed"
+                  src="../../images/intero.png"
+                  alt="interrogation point"
+                />
               </Box>
               <Box
                 position="absolute"
@@ -194,7 +225,11 @@ const Header = () => {
                 h={["10px", "14px", "18px"]}
                 w={["10px", "14px", "18px"]}
               >
-                <Img className="ghostlyShake" src="../../images/lamp.png" />
+                <Img
+                  className="ghostlyShake"
+                  src="../../images/lamp.png"
+                  alt="lamp"
+                />
               </Box>
               <Box
                 position="absolute"
@@ -203,7 +238,11 @@ const Header = () => {
                 h={["10px", "14px", "18px"]}
                 w={["10px", "14px", "18px"]}
               >
-                <Img className="ghostlyShake2" src="../../images/lamp2.png" />
+                <Img
+                  className="ghostlyShake2"
+                  src="../../images/lamp2.png"
+                  alt="lamp"
+                />
               </Box>
             </Box>
           </Box>
@@ -217,6 +256,7 @@ const Header = () => {
                 borderRadius="50%"
                 src="../../images/me.png"
                 w={["100px", "150px", "200px"]}
+                alt="lionel"
               />
             </VStack>
             <Img
@@ -227,6 +267,7 @@ const Header = () => {
               bottom="-25px"
               zIndex="2"
               opacity={[0, 0, 1]}
+              alt="arrow"
             />
 
             <Img
@@ -238,6 +279,7 @@ const Header = () => {
               zIndex="2"
               opacity={[1, 1, 0]}
               className="rotate-90miror"
+              alt="arrow"
             />
 
             <Img
@@ -249,6 +291,7 @@ const Header = () => {
               zIndex="2"
               opacity={[1, 1, 0]}
               className="rotate90"
+              alt="arrow"
             />
           </Box>
 
@@ -262,6 +305,7 @@ const Header = () => {
             <Img
               src="../../images/system.png"
               w={["100px", "150px", "230px"]}
+              alt="a computer, a smartphone and a tablet"
             />
           </Box>
         </Flex>
