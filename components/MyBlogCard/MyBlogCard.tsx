@@ -60,7 +60,12 @@ const MyBlogCard = ({
             src={`${host}assets/${data.Preview}.jpg`}
           />
 
-          <Text mt={2} fontSize="20px" fontWeight="semibold" lineHeight="short">
+          <Text
+            mt={2}
+            fontSize={["20px", "20px", "22px"]}
+            fontWeight="semibold"
+            lineHeight="short"
+          >
             {data.titre}
           </Text>
           <Text mt={2} fontSize="15px" fontWeight="semibold" lineHeight="short">

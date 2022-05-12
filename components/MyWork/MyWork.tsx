@@ -30,6 +30,7 @@ const MyWork = ({
     <div>
       <Box position="relative" bgColor={bgColor}>
         <Text
+          pt="30px"
           ml="30px"
           mb="30px"
           textAlign="left"

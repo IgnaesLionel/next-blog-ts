@@ -27,10 +27,12 @@ export default function Post({
         <Heading as="h1" textAlign="center" className={utilStyles.headingXl}>
           Projet : {data.titre}
         </Heading>
-        <Flex w="full" justifyContent={"right"}></Flex>
+        <Flex w="full"></Flex>
         {data.markdown_1 ? (
           <Box m="100">
-            <Markdown>{data.markdown_1}</Markdown>
+            <Markdown textAlign="left" justifyContent={"flex-start"}>
+              {data.markdown_1}
+            </Markdown>
           </Box>
         ) : null}
 

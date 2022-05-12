@@ -21,7 +21,14 @@ const MyWorkCard = ({
   const textColor = useColorModeValue("black", "white");
 
   return (
-    <Box m={"5px"} w="full">
+    <Box
+      m={"5px"}
+      w="full"
+      h="full"
+      display="flex"
+      flexGrow={1}
+      justifyContent="space-around"
+    >
       <Link href={`/work/${data.url}`}>
         <Box
           p="5"
@@ -31,10 +38,19 @@ const MyWorkCard = ({
           w="full"
           bg={bgColor}
           color={textColor}
+          display="flex"
+          flexDirection="column"
+          flexGrow={1}
+          justifyContent="space-around"
         >
           <Image borderRadius="md" src={`${host}assets/${data.image}.jpg`} />
 
-          <Text mt={2} fontSize="10px" fontWeight="semibold" lineHeight="short">
+          <Text
+            mt={2}
+            fontSize={["20px", "20px", "22px"]}
+            fontWeight="semibold"
+            lineHeight="short"
+          >
             {data.titre}
           </Text>
         </Box>

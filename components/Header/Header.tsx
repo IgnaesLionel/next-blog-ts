@@ -14,13 +14,7 @@ const Header = () => {
 
   console.log("loaded");
   return (
-    <Box
-      bg={bgColor}
-      w="100%"
-      position="relative"
-      overflow="hidden"
-      display="inline-block"
-    >
+    <Box bg={bgColor} w="100%" position="relative" overflow="hidden">
       <Box
         zIndex={0}
         w="100%"
@@ -290,7 +284,7 @@ const Header = () => {
         pt={["0px", "0px", "25px"]}
         mb={["50px", "50px", "0px"]}
       >
-        Your bright idea become a real business
+        Your bright idea become a real online business
       </Text>
     </Box>
   );
