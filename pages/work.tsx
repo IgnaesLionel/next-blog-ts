@@ -3,7 +3,8 @@ import Layout, { siteTitle } from "../components/layout";
 import { getMyData } from "../lib/posts";
 import { GetStaticProps } from "next"; //tsx
 import MyWorkCard from "../components/MyWorkCard/MyWorkCard";
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, useColorModeValue, Box, Text } from "@chakra-ui/react";
+import { FooterWithSocialIcons } from "../components/FooterWithSocialIcons/FooterWithSocialIcons";
 
 export default function Work({
   getAllMyWork,
@@ -20,20 +21,33 @@ export default function Work({
   }[];
   host: string;
 }) {
+  const bgColor = useColorModeValue("#50a0eb", "#04346a");
+  const txtColor = useColorModeValue("#010101", "#b4ddff");
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-
-      <h2>my work</h2>
-
-      <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
-        {getAllMyWork.map((data) => (
-          <MyWorkCard key={data.id} data={data} host={host} />
-        ))}
-      </SimpleGrid>
-    </Layout>
+    <Box bg={bgColor} color={txtColor}>
+      <Layout home>
+        <Box minH={"70vh"}>
+          <Head>
+            <title>{siteTitle}</title>
+          </Head>
+          <Text
+            as="h2"
+            mt="0px"
+            pt="20px"
+            pl="30px"
+            fontFamily="'Merienda One', sans-serif"
+          >
+            My Work
+          </Text>
+          <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
+            {getAllMyWork.map((data) => (
+              <MyWorkCard key={data.id} data={data} host={host} />
+            ))}
+          </SimpleGrid>
+        </Box>
+      </Layout>
+      <FooterWithSocialIcons />
+    </Box>
   );
 }
 

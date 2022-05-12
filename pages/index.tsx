@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+
 import { getMyData } from "../lib/posts";
-import Image from "next/image";
+
 import { GetStaticProps } from "next"; //tsx
-import { Text, Box, Center, useColorModeValue } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Header from "../components/Header/Header";
 import MyWork from "../components/MyWork/MyWork";
 import MyBlog from "../components/MyBlog/MyBlog";

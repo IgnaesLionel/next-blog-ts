@@ -3,7 +3,8 @@ import Layout, { siteTitle } from "../components/layout";
 import { getMyData } from "../lib/posts";
 import { GetStaticProps } from "next"; //tsx
 import MyBlogCard from "../components/MyBlogCard/MyBlogCard";
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, useColorModeValue, Box, Text } from "@chakra-ui/react";
+import { FooterWithSocialIcons } from "../components/FooterWithSocialIcons/FooterWithSocialIcons";
 
 export default function Blog({
   getAllMyPost,
@@ -24,20 +25,33 @@ export default function Blog({
   }[];
   host: string;
 }) {
+  const bgColor = useColorModeValue("#50a0eb", "#04346a");
+  const txtColor = useColorModeValue("#010101", "#b4ddff");
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <Box bg={bgColor} color={txtColor} minH={"70vh"}>
+      <Layout home>
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
 
-      <h2>my blog articles</h2>
+        <Text
+          as="h2"
+          mt="0px"
+          pt="20px"
+          pl="30px"
+          fontFamily="'Merienda One', sans-serif"
+        >
+          My Blog
+        </Text>
 
-      <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
-        {getAllMyPost.map((data) => (
-          <MyBlogCard key={data.id} data={data} host={host} />
-        ))}
-      </SimpleGrid>
-    </Layout>
+        <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
+          {getAllMyPost.map((data) => (
+            <MyBlogCard key={data.id} data={data} host={host} />
+          ))}
+        </SimpleGrid>
+      </Layout>
+      <FooterWithSocialIcons />
+    </Box>
   );
 }
 
