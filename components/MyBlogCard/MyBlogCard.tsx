@@ -58,6 +58,7 @@ const MyBlogCard = ({
             borderRadius="md"
             maxH="150px"
             src={`${host}assets/${data.Preview}.jpg`}
+            alt={data.titre}
           />
 
           <Text

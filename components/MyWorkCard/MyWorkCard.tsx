@@ -43,7 +43,11 @@ const MyWorkCard = ({
           flexGrow={1}
           justifyContent="space-around"
         >
-          <Image borderRadius="md" src={`${host}assets/${data.image}.jpg`} />
+          <Image
+            borderRadius="md"
+            src={`${host}assets/${data.image}.jpg`}
+            alt={data.titre}
+          />
 
           <Text
             mt={2}
