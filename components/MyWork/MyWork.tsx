@@ -38,6 +38,7 @@ const MyWork = ({
           fontSize={["md", "xl", "3xl"]}
           fontWeight="extrabold"
           color={txtColor}
+          fontFamily="'Merienda One', sans-serif"
         >
           My Work
         </Text>

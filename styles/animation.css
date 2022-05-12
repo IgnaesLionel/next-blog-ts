@@ -163,3 +163,12 @@
 
     transform: rotate(45deg) 
 }
+
+.rotate90{
+  transform: rotate(70deg)
+}
+
+.rotate-90miror{
+  transform: scaleX(-1) rotate(70deg);
+
+}

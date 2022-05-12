@@ -43,8 +43,6 @@ export default function Home({
     markdown_3: string | null;
   }[];
 }) {
-  const bgColor = useColorModeValue("white", "white");
-
   const slicedPost = getAllMyPost.slice(Math.max(getAllMyPost.length - 4, 0));
   const slicedWork = getAllMyWork.slice(Math.max(getAllMyWork.length - 4, 0));
 
@@ -54,21 +52,12 @@ export default function Home({
         <Head>
           <title>{siteTitle}</title>
         </Head>
-
         <Header />
         <MyWork data={slicedWork} host={host} />
         <ContactMe />
         <MyBlog data={slicedPost} host={host} />
 
         <FooterWithSocialIcons />
-
-        {/*     <Image
-              priority
-              src="/images/Logo-Poulpe.png"
-              height={826}
-              width={826}
-              alt="Logo"
-            /> */}
       </Layout>
     </Box>
   );

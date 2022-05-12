@@ -47,7 +47,7 @@ const Header = () => {
           fontSize={["10px", "15px", "20px"]}
           textAlign="center"
         >
-          Software developer
+          Web apps developer
         </Text>
         <Flex
           w="full"
@@ -57,30 +57,22 @@ const Header = () => {
           alignItems={["center", "center", "center"]}
           direction={["column", "column", "row"]}
         >
-          <Box
-            h={["100px", "170px", "250px"]}
-            w={["100px", "200px", "250px"]}
-            borderColor="red"
-            borderWidth="1px"
-            borderStyle="solid"
-          >
+          <Box h={["100px", "170px", "200px"]} w={["100px", "200px", "250px"]}>
             <Box w="full" position="relative">
-              <Text
-                bottom={["-15px", "-30px", "-50px"]}
-                position="absolute"
-                w="full"
-                textAlign="center"
-                fontSize={["10px", "20px", "40px"]}
-                fontFamily="'Merienda One', sans-serif"
-              >
-                Your ideas
-              </Text>
               <Flex justifyContent="center" alignItems="center" w="full">
                 <Img
                   src="../../images/brain.png"
                   w={["100px", "150px", "200px"]}
                 />
               </Flex>
+
+              <Img
+                position="absolute"
+                src="../../images/arrow.png"
+                w={["100px", "150px", "130px"]}
+                left="180px"
+                opacity={[0, 0, 1]}
+              />
 
               <Box
                 position="absolute"
@@ -219,24 +211,12 @@ const Header = () => {
               >
                 <Img className="ghostlyShake2" src="../../images/lamp2.png" />
               </Box>
-              <Box
-                position="absolute"
-                top="90px"
-                left="140px"
-                h="30px"
-                w="30px"
-              >
-                <Img src="../../images/bubble.png" />
-              </Box>
             </Box>
           </Box>
           <Box
             position="relative"
-            h={["100px", "170px", "250px"]}
+            h={["100px", "170px", "200px"]}
             w={["100px", "200px", "250px"]}
-            borderColor="red"
-            borderWidth="1px"
-            borderStyle="solid"
           >
             <VStack justifyContent="center">
               <Img
@@ -244,37 +224,51 @@ const Header = () => {
                 src="../../images/me.png"
                 w={["100px", "150px", "200px"]}
               />
-              <Text
-                textAlign="center"
-                bottom={["-15px", "-5px", "15px"]}
-                position="absolute"
-                w="full"
-                fontSize={["10px", "20px", "40px"]}
-                fontFamily="'Merienda One', sans-serif"
-              >
-                turn into
-              </Text>
             </VStack>
+            <Img
+              position="absolute"
+              src="../../images/arrow2.png"
+              w={["100px", "150px", "130px"]}
+              left="190px"
+              bottom="-25px"
+              zIndex="2"
+              opacity={[0, 0, 1]}
+            />
+
+            <Img
+              position="absolute"
+              src="../../images/arrow2.png"
+              w={["80px", "120px", "130px"]}
+              left={["70px", "160px", "190px"]}
+              bottom={["-10px", "-25px", "25px"]}
+              zIndex="2"
+              opacity={[1, 1, 0]}
+              className="rotate-90miror"
+            />
+
+            <Img
+              position="absolute"
+              src="../../images/arrow.png"
+              w={["80px", "120px", "130px"]}
+              left={["-60px", "-70px", "190px"]}
+              top={["-10px", "-25px", "25px"]}
+              zIndex="2"
+              opacity={[1, 1, 0]}
+              className="rotate90"
+            />
           </Box>
 
           <Box
-            h={["100px", "200px", "250"]}
+            h={["100px", "160px", "180"]}
             w={["100px", "200px", "250px"]}
+            pt="5px"
+            pl={["0px", "30px", "25px"]}
             position="relative"
-            borderColor="red"
-            borderWidth="1px"
-            borderStyle="solid"
           >
-            <Text
-              position="absolute"
-              w="full"
-              textAlign="center"
-              bottom={["+15px", "+30px", "+15px"]}
-              fontSize={["10px", "20px", "40px"]}
-              fontFamily="'Merienda One', sans-serif"
-            >
-              real project
-            </Text>
+            <Img
+              src="../../images/system.png"
+              w={["100px", "150px", "230px"]}
+            />
           </Box>
         </Flex>
 
@@ -287,6 +281,17 @@ const Header = () => {
           color={bgColor}
         ></VStack>
       </VStack>
+      <Text
+        w="full"
+        textAlign="center"
+        bottom={["15px", "30px", "15px"]}
+        fontSize={["10px", "20px", "25px"]}
+        fontFamily="'Merienda One', sans-serif"
+        pt={["0px", "0px", "25px"]}
+        mb={["50px", "50px", "0px"]}
+      >
+        Your bright idea become a real business
+      </Text>
     </Box>
   );
 };

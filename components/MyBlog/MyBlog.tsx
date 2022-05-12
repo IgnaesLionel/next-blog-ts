@@ -44,6 +44,7 @@ const MyBlog = ({
           fontSize={["md", "xl", "3xl"]}
           fontWeight="extrabold"
           color={txtColor}
+          fontFamily="'Merienda One', sans-serif"
         >
           My Blog
         </Text>
