@@ -13,28 +13,35 @@ const NavBar = ({ children }) => {
           h="50px"
           bg={bgColor}
           justifyContent="center"
-          color={textColor}
           fontFamily="'Merienda One', sans-serif"
           spacing={["15px", "30px", "60px"]}
         >
           <Link href="/">
             <a>
-              <Text fontSize="15px">Home</Text>
+              <Text color={textColor} fontSize="15px">
+                Home
+              </Text>
             </a>
           </Link>
           <Link href="/about">
             <a>
-              <Text fontSize="15px">About</Text>
+              <Text color={textColor} fontSize="15px">
+                About
+              </Text>
             </a>
           </Link>
           <Link href="/work">
             <a>
-              <Text fontSize="15px">Work</Text>
+              <Text color={textColor} fontSize="15px">
+                Work
+              </Text>
             </a>
           </Link>
           <Link href="/blog">
             <a>
-              <Text fontSize="15px">Blog</Text>
+              <Text color={textColor} fontSize="15px">
+                Blog
+              </Text>
             </a>
           </Link>
           <DarkModeButton />

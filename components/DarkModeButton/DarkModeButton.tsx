@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Button, Box, useColorMode } from "@chakra-ui/react";
+import { Button, Box, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 const DarkModeButton = () => {
   const [darkModeIcon, setDarkModeIcon] = useState(false);
   const { toggleColorMode } = useColorMode();
 
+  const textColor = useColorModeValue("black", "white");
   const darkIcon = (
     <Box w={35} h={35} borderRadius="50%">
       <svg fill="none" viewBox="0 0 24 24">
@@ -104,7 +105,12 @@ const DarkModeButton = () => {
   };
 
   return (
-    <Button name="dark mode" color="black" variant="link" onClick={handleClick}>
+    <Button
+      name="dark mode"
+      color={textColor}
+      variant="link"
+      onClick={handleClick}
+    >
       {darkModeIcon ? lightIcon : darkIcon}
     </Button>
   );
