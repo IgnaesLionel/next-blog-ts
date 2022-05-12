@@ -24,7 +24,7 @@ const Header = () => {
         left="0"
         bottom="0"
         opacity="0.051"
-        bgImage="url('/images/codebg.jpg')"
+        bgImage="url('/images/codebg.webp')"
         bgSize="cover"
         position="absolute"
       ></Box>
@@ -55,7 +55,7 @@ const Header = () => {
             <Box w="full" position="relative">
               <Flex justifyContent="center" alignItems="center" w="full">
                 <Img
-                  src="../../images/brain.png"
+                  src="../../images/brain.webp"
                   w={["100px", "150px", "200px"]}
                   alt="brain"
                 />
@@ -63,7 +63,7 @@ const Header = () => {
 
               <Img
                 position="absolute"
-                src="../../images/arrow.png"
+                src="../../images/arrow.webp"
                 w={["100px", "150px", "130px"]}
                 left="180px"
                 opacity={[0, 0, 1]}
@@ -79,7 +79,7 @@ const Header = () => {
               >
                 <Img
                   className="hourglass"
-                  src="../../images/sablier.png"
+                  src="../../images/sablier.webp"
                   alt="hourglass"
                 />
               </Box>
@@ -92,7 +92,7 @@ const Header = () => {
               >
                 <Img
                   className="spinReverse"
-                  src="../../images/circle.png"
+                  src="../../images/circle.webp"
                   alt="round arrows"
                 />
               </Box>
@@ -149,7 +149,7 @@ const Header = () => {
               >
                 <Img
                   className="vshake"
-                  src="../../images/fiole.png"
+                  src="../../images/fiole.webp"
                   alt="flask"
                 />
               </Box>
@@ -162,7 +162,7 @@ const Header = () => {
               >
                 <Img
                   className="spin"
-                  src="../../images/roue.png"
+                  src="../../images/roue.webp"
                   alt="mecanic wheel"
                 />
               </Box>
@@ -175,7 +175,7 @@ const Header = () => {
               >
                 <Img
                   className="spinReverse"
-                  src="../../images/roue.png"
+                  src="../../images/roue.webp"
                   alt="mecanic wheel"
                 />
               </Box>
@@ -188,7 +188,7 @@ const Header = () => {
               >
                 <Img
                   className="hshake"
-                  src="../../images/musique1.png"
+                  src="../../images/musique1.webp"
                   alt="music note"
                 />
               </Box>
@@ -201,7 +201,7 @@ const Header = () => {
               >
                 <Img
                   className="hshakeDelayed"
-                  src="../../images/musique2.png"
+                  src="../../images/musique2.webp"
                   alt="music note"
                 />
               </Box>
@@ -214,7 +214,7 @@ const Header = () => {
               >
                 <Img
                   className="hshakeDelayed"
-                  src="../../images/intero.png"
+                  src="../../images/intero.webp"
                   alt="interrogation point"
                 />
               </Box>
@@ -227,7 +227,7 @@ const Header = () => {
               >
                 <Img
                   className="ghostlyShake"
-                  src="../../images/lamp.png"
+                  src="../../images/lamp.webp"
                   alt="lamp"
                 />
               </Box>
@@ -240,7 +240,7 @@ const Header = () => {
               >
                 <Img
                   className="ghostlyShake2"
-                  src="../../images/lamp2.png"
+                  src="../../images/lamp2.webp"
                   alt="lamp"
                 />
               </Box>
@@ -254,14 +254,14 @@ const Header = () => {
             <VStack justifyContent="center">
               <Img
                 borderRadius="50%"
-                src="../../images/me.png"
+                src="../../images/me.webp"
                 w={["100px", "150px", "200px"]}
                 alt="lionel"
               />
             </VStack>
             <Img
               position="absolute"
-              src="../../images/arrow2.png"
+              src="../../images/arrow2.webp"
               w={["100px", "150px", "130px"]}
               left="190px"
               bottom="-25px"
@@ -272,7 +272,7 @@ const Header = () => {
 
             <Img
               position="absolute"
-              src="../../images/arrow2.png"
+              src="../../images/arrow2.webp"
               w={["80px", "120px", "130px"]}
               left={["70px", "160px", "190px"]}
               bottom={["-10px", "-25px", "25px"]}
@@ -284,7 +284,7 @@ const Header = () => {
 
             <Img
               position="absolute"
-              src="../../images/arrow.png"
+              src="../../images/arrow.webp"
               w={["80px", "120px", "130px"]}
               left={["-60px", "-70px", "190px"]}
               top={["-10px", "-25px", "25px"]}
@@ -303,7 +303,7 @@ const Header = () => {
             position="relative"
           >
             <Img
-              src="../../images/system.png"
+              src="../../images/system.webp"
               w={["100px", "150px", "230px"]}
               alt="a computer, a smartphone and a tablet"
             />
