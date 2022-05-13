@@ -1,5 +1,12 @@
 import React from "react";
-import { SimpleGrid, useColorModeValue, Box, Text } from "@chakra-ui/react";
+import {
+  Center,
+  useColorModeValue,
+  Box,
+  Text,
+  Img,
+  Flex,
+} from "@chakra-ui/react";
 import Layout, { siteTitle } from "../components/layout";
 import Head from "next/head";
 import { FooterWithSocialIcons } from "../components/FooterWithSocialIcons/FooterWithSocialIcons";
@@ -14,11 +21,6 @@ const about = () => {
           <title>{siteTitle}</title>
         </Head>
         <Box minH={"70vh"}>
-          <div>
-            My name is Lionel and I am a developer and graphic designer.
-            Currently I'm living in France. Now I am available for freelance
-            projects, commission or another interesting offers.
-          </div>
           <Text
             as="h2"
             mt="0px"
@@ -26,9 +28,37 @@ const about = () => {
             pl="30px"
             fontFamily="'Merienda One', sans-serif"
           >
-            My Blog
+            About me
           </Text>
+          <Center>
+            <Img
+              borderRadius="50%"
+              src="../../images/me.webp"
+              w={["100px", "150px", "200px"]}
+              alt="lionel"
+              mt="50px"
+            />
+          </Center>
+          <Box
+            m="0 auto"
+            mt="30px"
+            maxWidth="80vw"
+            display="flex"
+            justifyContent="center"
+            borderColor="whiteAlpha.500"
+            borderStyle="solid"
+            borderWidth="3px"
+            borderRadius="10px"
+            bg={"blackAlpha.500"}
+          >
+            <Text textAlign={"center"} p="20px">
+              My name is Lionel and I am a developer and graphic designer.
+              Currently I'm living in France. Now I am available for freelance
+              projects, commission or another interesting offers.
+            </Text>
+          </Box>
         </Box>
+
         <FooterWithSocialIcons />
       </Layout>
     </Box>
