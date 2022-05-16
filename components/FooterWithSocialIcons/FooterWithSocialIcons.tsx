@@ -9,9 +9,12 @@ import {
 import * as React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-export const FooterWithSocialIcons = () => {
+interface DateInterface {
+  date?: string;
+}
+export const FooterWithSocialIcons = ({ date }: { date?: string }) => {
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
-  const textColor = useColorModeValue("black", "white");
+
   return (
     <Flex
       bg={bgColor}
@@ -43,6 +46,7 @@ export const FooterWithSocialIcons = () => {
 
         <Text fontSize="sm" color="subtle">
           &copy; {new Date().getFullYear()} Ignaes Lionel. All rights reserved.
+          Generated : {date}
         </Text>
       </Stack>
     </Flex>

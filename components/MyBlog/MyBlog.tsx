@@ -32,6 +32,12 @@ const MyBlog = ({
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const txtColor = useColorModeValue("#010101", "#b4ddff");
 
+  // order by id
+  const posts = [...data];
+  posts.sort(function (a, b) {
+    return b.id - a.id;
+  });
+
   return (
     <div>
       <Box bg={bgColor}>
@@ -50,7 +56,7 @@ const MyBlog = ({
         </Text>
 
         <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
-          {data.map((data) => (
+          {posts.map((data) => (
             <MyBlogCard key={data.id} data={data} host={host} />
           ))}
         </SimpleGrid>

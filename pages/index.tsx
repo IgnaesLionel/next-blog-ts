@@ -15,6 +15,7 @@ export default function Home({
   getAllMyPost,
   host,
   getAllMyWork,
+  date,
 }: {
   getAllMyPost: {
     date: string;
@@ -42,6 +43,7 @@ export default function Home({
     markdown_2: string | null;
     markdown_3: string | null;
   }[];
+  date: string;
 }) {
   const slicedPost = getAllMyPost.slice(Math.max(getAllMyPost.length - 4, 0));
   const slicedWork = getAllMyWork.slice(Math.max(getAllMyWork.length - 4, 0));
@@ -53,11 +55,11 @@ export default function Home({
           <title>{siteTitle}</title>
         </Head>
         <Header />
+
         <MyWork data={slicedWork} host={host} />
         <ContactMe />
         <MyBlog data={slicedPost} host={host} />
-
-        <FooterWithSocialIcons />
+        <FooterWithSocialIcons date={date.toString()} />
       </Layout>
     </Box>
   );
@@ -66,11 +68,14 @@ export default function Home({
 export const getStaticProps: GetStaticProps = async () => {
   const getAllMyPost = await getMyData("items/Post/");
   const getAllMyWork = await getMyData("items/Work/");
+  const date = new Date().toISOString().split("T", 1)[0];
   return {
     props: {
       getAllMyPost: getAllMyPost.data,
       getAllMyWork: getAllMyWork.data,
       host: process.env.DB_HOST,
+      date: date,
     },
+    revalidate: 10,
   };
 };

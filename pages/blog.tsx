@@ -27,6 +27,13 @@ export default function Blog({
 }) {
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const txtColor = useColorModeValue("#010101", "#b4ddff");
+
+  // order by id
+  const posts = [...getAllMyPost];
+  posts.sort(function (a, b) {
+    return b.id - a.id;
+  });
+
   return (
     <Box bg={bgColor} color={txtColor} minH={"70vh"}>
       <Layout home>
@@ -45,7 +52,7 @@ export default function Blog({
         </Text>
 
         <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
-          {getAllMyPost.map((data) => (
+          {posts.map((data) => (
             <MyBlogCard key={data.id} data={data} host={host} />
           ))}
         </SimpleGrid>
