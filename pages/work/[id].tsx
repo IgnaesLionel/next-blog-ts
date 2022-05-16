@@ -4,8 +4,9 @@ import Head from "next/head";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next"; //tsx
 import Markdown from "markdown-to-jsx";
-import { Heading, HStack, Box, Button, Flex } from "@chakra-ui/react";
+import { Heading, HStack, Box, Button, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import Link from "next/link";
 
 export default function Post({
   data,
@@ -15,6 +16,7 @@ export default function Post({
     markdown_1: string;
     markdown_2: string;
     markdown_3: string;
+    fullUrl: string;
   };
 }) {
   return (
@@ -24,15 +26,13 @@ export default function Post({
       </Head>
 
       <article>
-        <Heading as="h1" textAlign="center" className={utilStyles.headingXl}>
+        <Heading as="h1" className={utilStyles.headingXl}>
           Projet : {data.titre}
         </Heading>
         <Flex w="full"></Flex>
         {data.markdown_1 ? (
           <Box m="100">
-            <Markdown textAlign="left" justifyContent={"flex-start"}>
-              {data.markdown_1}
-            </Markdown>
+            <Markdown>{data.markdown_1}</Markdown>
           </Box>
         ) : null}
 
@@ -48,12 +48,13 @@ export default function Post({
           />
         </HStack>
       </article>
-      <Button
-        onClick={() => {
-          console.log("test");
-        }}
-      >
-        let's explore it
+
+      <Button justifyContent="flex-end">
+        <Link href={data.fullUrl}>
+          <a>
+            <Text fontSize="15px">let's explore it!</Text>
+          </a>
+        </Link>
       </Button>
     </Layout>
   );
