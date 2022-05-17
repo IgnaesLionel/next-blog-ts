@@ -76,6 +76,6 @@ export const getStaticProps: GetStaticProps = async () => {
       host: process.env.DB_HOST,
       date: date,
     },
-    revalidate: 10,
+    revalidate: 120,
   };
 };

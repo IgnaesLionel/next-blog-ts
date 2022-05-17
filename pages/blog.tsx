@@ -70,5 +70,7 @@ export const getStaticProps: GetStaticProps = async () => {
       getAllMyPost: getAllMyPost.data,
       host: process.env.DB_HOST,
     },
+
+    revalidate: 120,
   };
 };
