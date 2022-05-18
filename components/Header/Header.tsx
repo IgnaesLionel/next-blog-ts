@@ -1,20 +1,10 @@
 import React from "react";
 import Head from "next/head";
-import {
-  Text,
-  Box,
-  useColorModeValue,
-  VStack,
-  Img,
-  Flex,
-} from "@chakra-ui/react";
+import { Text, Box, VStack, Img, Flex } from "@chakra-ui/react";
 
 const Header = () => {
-  const bgColor = useColorModeValue("#50a0eb", "#04346a");
-
-  console.log("loaded");
   return (
-    <Box bg={bgColor} w="100%" position="relative" overflow="hidden">
+    <Box w="100%" position="relative" overflow="hidden">
       <Box
         zIndex={0}
         w="100%"
@@ -316,7 +306,6 @@ const Header = () => {
           mt={[2, 10, 30]}
           fontFamily="'Merienda One', sans-serif"
           fontSize={["4vw", "4vw", "2.0vw"]}
-          color={bgColor}
         ></VStack>
       </VStack>
       <Text

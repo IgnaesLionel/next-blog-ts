@@ -16,12 +16,7 @@ export const FooterWithSocialIcons = ({ date }: { date?: string }) => {
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
 
   return (
-    <Flex
-      bg={bgColor}
-      as="footer"
-      role="contentinfo"
-      py={{ base: "12", md: "16" }}
-    >
+    <Flex as="footer" role="contentinfo" py={{ base: "12", md: "16" }}>
       <Stack spacing={{ base: "4", md: "4" }} pl={"40px"}>
         <ButtonGroup variant="ghost">
           <IconButton

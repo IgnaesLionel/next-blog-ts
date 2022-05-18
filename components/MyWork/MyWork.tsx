@@ -24,11 +24,9 @@ const MyWork = ({
   }[];
   host: string;
 }) => {
-  const bgColor = useColorModeValue("#50a0eb", "#04346a");
-  const txtColor = useColorModeValue("#010101", "#b4ddff");
   return (
     <div>
-      <Box position="relative" bgColor={bgColor}>
+      <Box position="relative" p={["0px", "15px", "40px"]}>
         <Text
           pt="30px"
           ml="30px"
@@ -38,22 +36,28 @@ const MyWork = ({
           bgClip="text"
           fontSize={["md", "xl", "3xl"]}
           fontWeight="extrabold"
-          color={txtColor}
+          color="#b4ddff"
           fontFamily="'Merienda One', sans-serif"
         >
           My Work
         </Text>
 
-        <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
+        <SimpleGrid
+          m={["5px", "5px", "5px"]}
+          columns={[1, 2, 4]}
+          spacing={["10px", "10px", "10px"]}
+        >
           {data.map((data) => (
             <MyWorkCard key={data.id} data={data} host={host} />
           ))}
         </SimpleGrid>
         <HStack justifyContent="right">
-          <Button my="10px" mx="30px">
+          <Button colorScheme="messenger" mt="50px" mx="30px">
             <Link href="/work">
               <a>
-                <Text fontSize="15px">more projects...</Text>
+                <Text fontSize="15px" color="black">
+                  more projects...
+                </Text>
               </a>
             </Link>
           </Button>

@@ -3,7 +3,7 @@ import Layout, { siteTitle } from "../components/layout";
 import { getMyData } from "../lib/posts";
 import { GetStaticProps } from "next"; //tsx
 import MyBlogCard from "../components/MyBlogCard/MyBlogCard";
-import { SimpleGrid, useColorModeValue, Box, Text } from "@chakra-ui/react";
+import { SimpleGrid, Box, Text } from "@chakra-ui/react";
 import { FooterWithSocialIcons } from "../components/FooterWithSocialIcons/FooterWithSocialIcons";
 
 export default function Blog({
@@ -25,9 +25,6 @@ export default function Blog({
   }[];
   host: string;
 }) {
-  const bgColor = useColorModeValue("#50a0eb", "#04346a");
-  const txtColor = useColorModeValue("#010101", "#b4ddff");
-
   // order by id
   const posts = [...getAllMyPost];
   posts.sort(function (a, b) {
@@ -35,7 +32,7 @@ export default function Blog({
   });
 
   return (
-    <Box bg={bgColor} color={txtColor} minH={"70vh"}>
+    <Box className="mainBackground" minH={"70vh"}>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
@@ -51,7 +48,11 @@ export default function Blog({
           My Blog
         </Text>
 
-        <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
+        <SimpleGrid
+          mx="20px"
+          columns={[1, 2, 4]}
+          spacing={["10px", "10px", "10px"]}
+        >
           {posts.map((data) => (
             <MyBlogCard key={data.id} data={data} host={host} />
           ))}

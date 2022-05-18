@@ -22,7 +22,6 @@ const MyBlogCard = ({
   };
   host: string;
 }) => {
-  const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const textColor = useColorModeValue("black", "white");
 
   const slicedMarkup = data.markup_1.substring(0, 50) + "...";
@@ -38,9 +37,10 @@ const MyBlogCard = ({
     >
       <Link href={`/blog/${data.url}`}>
         <Box
-          p="5"
-          maxW="280px"
-          minW="200px"
+          p={["15px", "20px", "20px"]}
+          w="full"
+          maxW="320px"
+          minH="300px"
           borderWidth="2px"
           borderRadius="10px"
           bg={"whiteAlpha.300"}
@@ -63,7 +63,7 @@ const MyBlogCard = ({
 
           <Text
             mt={2}
-            fontSize={["20px", "20px", "22px"]}
+            fontSize={["15px", "16px", "18px"]}
             fontWeight="semibold"
             lineHeight="short"
           >

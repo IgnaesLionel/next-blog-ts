@@ -15,7 +15,7 @@ const about = () => {
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const txtColor = useColorModeValue("#010101", "#b4ddff");
   return (
-    <Box bg={bgColor} color={txtColor}>
+    <Box className="mainBackground" color={txtColor}>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
@@ -39,24 +39,28 @@ const about = () => {
               mt="50px"
             />
           </Center>
-          <Box
-            m="0 auto"
-            mt="30px"
-            maxWidth="80vw"
-            display="flex"
-            justifyContent="center"
-            borderColor="whiteAlpha.500"
-            borderStyle="solid"
-            borderWidth="3px"
-            borderRadius="10px"
-            bg={"blackAlpha.500"}
-          >
-            <Text textAlign={"center"} p="20px">
-              My name is Lionel and I am a developer and graphic designer.
-              Currently I'm living in France. Now I am available for freelance
-              projects, commission or another interesting offers.
-            </Text>
-          </Box>
+          <Center>
+            <Box
+              mt="30px"
+              maxWidth="80vw"
+              borderColor="whiteAlpha.500"
+              borderStyle="solid"
+              borderWidth="3px"
+              borderRadius="10px"
+              bg={"blackAlpha.500"}
+              w={["300px", "450px", "600px"]}
+            >
+              <Text textAlign={"center"} p="20px">
+                My name is Lionel and I am a developer and graphic designer.
+                Currently I'm living in France.
+              </Text>
+
+              <Text textAlign={"center"} p="20px">
+                Now I am available for freelance projects, commission or another
+                interesting offers.
+              </Text>
+            </Box>
+          </Center>
         </Box>
 
         <FooterWithSocialIcons />

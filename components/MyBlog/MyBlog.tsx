@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  SimpleGrid,
-  Text,
-  useColorModeValue,
-  Button,
-  HStack,
-} from "@chakra-ui/react";
+import { Box, SimpleGrid, Text, Button, HStack } from "@chakra-ui/react";
 import Link from "next/link";
 import MyBlogCard from "../MyBlogCard/MyBlogCard";
 
@@ -29,9 +22,6 @@ const MyBlog = ({
   }[];
   host: string;
 }) => {
-  const bgColor = useColorModeValue("#50a0eb", "#04346a");
-  const txtColor = useColorModeValue("#010101", "#b4ddff");
-
   // order by id
   const posts = [...data];
   posts.sort(function (a, b) {
@@ -40,7 +30,7 @@ const MyBlog = ({
 
   return (
     <div>
-      <Box bg={bgColor}>
+      <Box p={["0px", "15px", "40px"]}>
         <Text
           ml="30px"
           mb="30px"
@@ -49,23 +39,33 @@ const MyBlog = ({
           bgClip="text"
           fontSize={["md", "xl", "3xl"]}
           fontWeight="extrabold"
-          color={txtColor}
           fontFamily="'Merienda One', sans-serif"
+          color="b4ddff"
         >
           My Blog
         </Text>
 
-        <SimpleGrid mx="20px" columns={[1, 2, 4]} spacing="40px">
+        <SimpleGrid
+          m={["5px", "5px", "5px"]}
+          columns={[1, 2, 4]}
+          spacing={["10px", "10px", "10px"]}
+        >
           {posts.map((data) => (
             <MyBlogCard key={data.id} data={data} host={host} />
           ))}
         </SimpleGrid>
 
         <HStack justifyContent="right">
-          <Button my="10px" mx="30px">
+          <Button
+            mt={["15px", "25px", "40px"]}
+            mx="30px"
+            colorScheme="messenger"
+          >
             <Link href="/blog">
               <a>
-                <Text fontSize="15px">more articles...</Text>
+                <Text fontSize="15px" color="black">
+                  more articles...
+                </Text>
               </a>
             </Link>
           </Button>

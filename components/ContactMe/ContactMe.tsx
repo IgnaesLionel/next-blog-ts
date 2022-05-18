@@ -7,14 +7,13 @@ const ContactMe = () => {
     <div>
       <Box
         p="10"
-        bg={bgColor}
         fontFamily="'Merienda One', sans-serif"
         display="flex"
         justifyContent="center"
         alignItems="center"
       >
         Interested in working together ?
-        <Button ml="20px" colorScheme="red">
+        <Button ml="20px" colorScheme="messenger" size="sm">
           contact me !
         </Button>
       </Box>
