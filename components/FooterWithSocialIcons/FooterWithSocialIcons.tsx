@@ -16,9 +16,14 @@ export const FooterWithSocialIcons = ({ date }: { date?: string }) => {
   const bgColor = useColorModeValue("#50a0eb", "#04346a");
 
   return (
-    <Flex as="footer" role="contentinfo" py={{ base: "12", md: "16" }}>
-      <Stack spacing={{ base: "4", md: "4" }} pl={"40px"}>
-        <ButtonGroup variant="ghost">
+    <Flex
+      as="footer"
+      role="contentinfo"
+      py={{ base: "12", md: "16" }}
+      justifyContent="center"
+    >
+      <Stack spacing={{ base: "4", md: "4" }}>
+        <ButtonGroup variant="ghost" justifyContent="center">
           <IconButton
             as="a"
             href="#"
@@ -41,8 +46,8 @@ export const FooterWithSocialIcons = ({ date }: { date?: string }) => {
 
         <Text fontSize="sm" color="subtle">
           &copy; {new Date().getFullYear()} Ignaes Lionel. All rights reserved.
-          Generated : {date}
         </Text>
+        <Text fontSize="sm">Generated : {date} </Text>
       </Stack>
     </Flex>
   );

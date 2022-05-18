@@ -35,6 +35,7 @@ export default function Work({
             mt="0px"
             pt="20px"
             pl="30px"
+            mb="90px"
             fontFamily="'Merienda One', sans-serif"
           >
             My Work

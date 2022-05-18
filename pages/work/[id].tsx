@@ -4,7 +4,15 @@ import Head from "next/head";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next"; //tsx
 import Markdown from "markdown-to-jsx";
-import { Heading, HStack, Box, Button, Flex, Text } from "@chakra-ui/react";
+import {
+  Heading,
+  HStack,
+  Box,
+  Button,
+  Flex,
+  Text,
+  Center,
+} from "@chakra-ui/react";
 import React from "react";
 import Link from "next/link";
 
@@ -48,14 +56,17 @@ export default function Post({
           />
         </HStack>
       </article>
-
-      <Button justifyContent="flex-end">
-        <Link href={data.fullUrl}>
-          <a>
-            <Text fontSize="15px">let's explore it!</Text>
-          </a>
-        </Link>
-      </Button>
+      <Center mb="50px">
+        <Button justifyContent="flex-end" colorScheme={"messenger"}>
+          <Link href={data.fullUrl}>
+            <a>
+              <Text fontSize="15px" color="red">
+                let's explore it!
+              </Text>
+            </a>
+          </Link>
+        </Button>
+      </Center>
     </Layout>
   );
 }

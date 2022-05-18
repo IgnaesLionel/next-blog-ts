@@ -44,6 +44,7 @@ export default function Blog({
           pt="20px"
           pl="30px"
           fontFamily="'Merienda One', sans-serif"
+          mb="90px"
         >
           My Blog
         </Text>
