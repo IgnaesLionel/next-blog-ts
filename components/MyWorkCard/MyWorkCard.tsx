@@ -38,6 +38,8 @@ const MyWorkCard = ({
           flexDirection="column"
           flexGrow={1}
           justifyContent="space-around"
+          mr="10px"
+          mb="10px"
         >
           <Image
             borderRadius="md"
