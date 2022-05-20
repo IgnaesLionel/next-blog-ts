@@ -6,7 +6,7 @@ import { GetStaticProps, GetStaticPaths } from "next"; //tsx
 import Markdown from "markdown-to-jsx";
 import {
   Heading,
-  HStack,
+  VStack,
   Box,
   Button,
   Flex,
@@ -28,46 +28,48 @@ export default function Post({
   };
 }) {
   return (
-    <Layout>
-      <Head>
-        <title> Projet : {data.titre} </title>
-      </Head>
+    <Box className="mainBackground" pt="1px" minHeight="150vh">
+      <Layout>
+        <div>
+          <Head>
+            <title> Projet : {data.titre} </title>
+          </Head>
 
-      <article>
-        <Heading as="h1" className={utilStyles.headingXl}>
-          Projet : {data.titre}
-        </Heading>
-        <Flex w="full"></Flex>
-        {data.markdown_1 ? (
-          <Box m="100">
-            <Markdown>{data.markdown_1}</Markdown>
-          </Box>
-        ) : null}
+          <article>
+            <Heading as="h1" className={utilStyles.headingXl} pl="30px">
+              Projet : {data.titre}
+            </Heading>
 
-        {data.markdown_2 ? (
-          <Box m="100">
-            <Markdown>{data.markdown_2}</Markdown>
-          </Box>
-        ) : null}
-        <HStack p="30" justifyContent={"center"}>
-          <Markdown
-            children={data.markdown_3}
-            options={{ wrapper: React.Fragment }}
-          />
-        </HStack>
-      </article>
-      <Center mb="50px">
-        <Button justifyContent="flex-end" colorScheme={"messenger"}>
-          <Link href={data.fullUrl}>
-            <a>
-              <Text fontSize="15px" color="red">
-                let's explore it!
-              </Text>
-            </a>
-          </Link>
-        </Button>
-      </Center>
-    </Layout>
+            <Box margin="0 auto" w="80%">
+              {data.markdown_1 ? <Markdown>{data.markdown_1}</Markdown> : null}
+
+              {data.markdown_2 ? (
+                <Box m="50px">
+                  <Markdown>{data.markdown_2}</Markdown>
+                </Box>
+              ) : null}
+            </Box>
+            <VStack p="30" justifyContent={"center"}>
+              <Markdown
+                children={data.markdown_3}
+                options={{ wrapper: React.Fragment }}
+              />
+            </VStack>
+          </article>
+          <Center mb="50px">
+            <Button justifyContent="flex-end" colorScheme={"messenger"}>
+              <Link href={data.fullUrl}>
+                <a>
+                  <Text fontSize="15px" color="red">
+                    let's explore it!
+                  </Text>
+                </a>
+              </Link>
+            </Button>
+          </Center>
+        </div>
+      </Layout>
+    </Box>
   );
 }
 
