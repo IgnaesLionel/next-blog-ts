@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./ContactByMail.module.css";
 import { init } from "@emailjs/browser";
 import emailjs from "@emailjs/browser";
@@ -15,6 +15,15 @@ const ContactByMail = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isVerified, setIsverified] = useState(false);
+  const [showButton, setShowButton] = useState(true);
+
+  const waitBeforeReSendMessage = () => {
+    setShowButton(false);
+    setTimeout(() => {
+      setShowButton(true);
+    }, 20000);
+    return () => clearTimeout(waitBeforeReSendMessage);
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -46,6 +55,7 @@ const ContactByMail = () => {
       setPhone("");
       setEmail("");
       setMessage("");
+      waitBeforeReSendMessage();
     }
   };
 
@@ -96,11 +106,18 @@ const ContactByMail = () => {
                 placeholder="Your message*"
                 value={message}
               />
-              <button className={classes.buttonContact} type="submit">
-                Send your message
-              </button>
+              {showButton ? (
+                <button className={classes.buttonContact} type="submit">
+                  Send your message
+                </button>
+              ) : (
+                <button className={classes.buttonContact}>
+                  Thanks for your message !
+                </button>
+              )}
             </div>
           </form>
+          {showButton}
           <GoogleReCaptchaProvider
             reCaptchaKey={process.env.NEXT_PUBLIC_RECAPCHA}
           >
