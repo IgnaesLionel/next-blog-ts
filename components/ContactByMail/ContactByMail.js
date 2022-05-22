@@ -19,23 +19,21 @@ const ContactByMail = () => {
 
   useEffect(() => {
     if (window.localStorage.getItem("sendedMessage") !== null) {
-      timer20();
+      wait20sAndResetKey();
     } else {
       setShowButton(true);
     }
   }, []);
 
-  const waitBeforeReSendMessage = () => {
+  const removeBtnAndCreateKey = () => {
     setShowButton(false);
     window.localStorage.setItem("sendedMessage", "sended");
-    timer20();
-    return () => clearTimeout(waitBeforeReSendMessage);
+    wait20sAndResetKey();
+    return () => clearTimeout(removeBtnAndCreateKey);
   };
 
-  const timer20 = () => {
-    console.log("timer commencé");
+  const wait20sAndResetKey = () => {
     setTimeout(() => {
-      console.log("timer fini");
       window.localStorage.removeItem("sendedMessage");
       setShowButton(true);
     }, 20000);
@@ -72,7 +70,7 @@ const ContactByMail = () => {
       setPhone("");
       setEmail("");
       setMessage("");
-      waitBeforeReSendMessage();
+      removeBtnAndCreateKey();
     }
   };
 
