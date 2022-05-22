@@ -19,7 +19,7 @@ const ContactByMail = () => {
   const handleClick = (e) => {
     e.preventDefault();
 
-    if (name && message && phone && email) {
+    if (name && message && phone && email && isVerified) {
       let data = {
         name,
         phone,
@@ -48,8 +48,6 @@ const ContactByMail = () => {
       setMessage("");
     }
   };
-
-  console.log(process.env.NEXT_PUBLIC_RECAPCHA);
 
   return (
     <div>
@@ -99,14 +97,18 @@ const ContactByMail = () => {
                 value={message}
               />
               <button className={classes.buttonContact} type="submit">
-                Envoyer votre message
+                Send your message
               </button>
             </div>
           </form>
           <GoogleReCaptchaProvider
             reCaptchaKey={process.env.NEXT_PUBLIC_RECAPCHA}
           >
-            <GoogleReCaptcha onVerify={console.log("test")} />
+            <GoogleReCaptcha
+              onVerify={() => {
+                setIsverified(true);
+              }}
+            />
           </GoogleReCaptchaProvider>
         </header>
       </div>
