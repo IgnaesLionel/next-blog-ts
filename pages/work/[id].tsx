@@ -6,12 +6,14 @@ import { GetStaticProps, GetStaticPaths } from "next"; //tsx
 import Markdown from "markdown-to-jsx";
 import {
   Heading,
-  VStack,
+  HStack,
   Box,
   Button,
   Flex,
   Text,
   Center,
+  SimpleGrid,
+  ButtonGroup,
 } from "@chakra-ui/react";
 import React from "react";
 import Link from "next/link";
@@ -49,23 +51,44 @@ export default function Post({
                 </Box>
               ) : null}
             </Box>
-            <VStack p="30" justifyContent={"center"}>
-              <Markdown
-                children={data.markdown_3}
-                options={{ wrapper: React.Fragment }}
-              />
-            </VStack>
+            <Box mt="40px" display="flex" justifyContent="center">
+              <SimpleGrid
+                columns={[2, 2, 4, 4]}
+                textAlign="center"
+                lineHeight="90px"
+                spacing={["5px", "5px", "5px"]}
+                w="50%"
+                alignContent="center"
+                alignItems="center"
+              >
+                <Markdown
+                  children={data.markdown_3}
+                  options={{ wrapper: React.Fragment }}
+                />
+              </SimpleGrid>
+            </Box>
           </article>
           <Center mb="50px">
-            <Button justifyContent="flex-end" colorScheme={"messenger"}>
-              <Link href={data.fullUrl}>
-                <a>
-                  <Text fontSize="15px" color="red">
-                    let's explore it!
-                  </Text>
-                </a>
-              </Link>
-            </Button>
+            <ButtonGroup mt="40px" isAttached>
+              <Button colorScheme={"messenger"}>
+                <Link href={data.fullUrl}>
+                  <a>
+                    <Text fontSize="15px" color="white">
+                      Try it!
+                    </Text>
+                  </a>
+                </Link>
+              </Button>
+              <Button colorScheme={"messenger"}>
+                <Link href={"/work"}>
+                  <a>
+                    <Text fontSize="15px" color="white">
+                      back
+                    </Text>
+                  </a>
+                </Link>
+              </Button>
+            </ButtonGroup>
           </Center>
         </div>
       </Layout>

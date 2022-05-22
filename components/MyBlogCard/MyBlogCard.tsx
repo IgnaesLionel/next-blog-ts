@@ -39,7 +39,7 @@ const MyBlogCard = ({
         <a>
           <Box
             p={["15px", "20px", "20px"]}
-            minH="320px"
+            minH="380px"
             maxWidth={["200px", "200px", "235px", "230px"]}
             borderWidth="2px"
             borderRadius="10px"

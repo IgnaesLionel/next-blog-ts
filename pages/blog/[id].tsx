@@ -6,8 +6,8 @@ import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next"; //tsx
 import CodeComponent from "../../components/CodeComponent";
 import Markdown from "markdown-to-jsx";
-import { Heading, Center, Box } from "@chakra-ui/react";
-
+import { Heading, Center, Box, Button, Text, Flex } from "@chakra-ui/react";
+import Link from "next/link";
 export default function Post({
   data,
 }: {
@@ -64,6 +64,17 @@ export default function Post({
           </pre>
         ) : null}
       </article>
+      <Flex w="100%" justifyContent="center">
+        <Button colorScheme={"messenger"}>
+          <Link href={"/blog"}>
+            <a>
+              <Text fontSize="15px" color="black">
+                back
+              </Text>
+            </a>
+          </Link>
+        </Button>
+      </Flex>
     </Layout>
   );
 }

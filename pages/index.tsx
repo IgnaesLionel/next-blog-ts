@@ -45,7 +45,7 @@ export default function Home({
   }[];
   date: string;
 }) {
-  const slicedPost = getAllMyPost.slice(Math.max(getAllMyPost.length - 4, 0));
+  const slicedPost = getAllMyPost.slice(Math.max(getAllMyPost.length - 8, 0));
   const slicedWork = getAllMyWork.slice(Math.max(getAllMyWork.length - 4, 0));
 
   return (
