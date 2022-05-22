@@ -51,7 +51,7 @@ export default function Blog({
 
         <SimpleGrid
           mx="20px"
-          columns={[1, 2, 4]}
+          columns={[1, 2, 3, 4]}
           spacing={["10px", "10px", "10px"]}
         >
           {posts.map((data) => (

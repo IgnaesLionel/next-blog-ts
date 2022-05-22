@@ -39,9 +39,8 @@ const MyBlogCard = ({
         <a>
           <Box
             p={["15px", "20px", "20px"]}
-            w="full"
-            maxW="320px"
-            minH="300px"
+            minH="320px"
+            maxWidth={["200px", "200px", "235px", "230px"]}
             borderWidth="2px"
             borderRadius="10px"
             bg={"whiteAlpha.300"}
@@ -50,8 +49,6 @@ const MyBlogCard = ({
             flexDirection="column"
             flexGrow={1}
             justifyContent="space-around"
-            mr="10px"
-            mb="10px"
           >
             <small>
               <Date dateString={data.date} />
@@ -59,9 +56,10 @@ const MyBlogCard = ({
             <Image
               m="auto"
               borderRadius="md"
-              maxH="150px"
               src={`${host}assets/${data.Preview}.jpg`}
               alt={data.titre}
+              maxW="auto"
+              minW="auto"
             />
 
             <Text

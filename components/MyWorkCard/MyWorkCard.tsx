@@ -29,7 +29,7 @@ const MyWorkCard = ({
       <Link href={`/work/${data.url}`}>
         <a>
           <Box
-            p="2"
+            p={["15px", "20px", "20px"]}
             maxW="320px"
             borderWidth="2px"
             borderRadius="10px"
@@ -41,11 +41,15 @@ const MyWorkCard = ({
             justifyContent="space-around"
             mr="10px"
             mb="10px"
+            maxH="300px"
+            minH="260px"
           >
             <Image
+              m="auto"
               borderRadius="md"
               src={`${host}assets/${data.image}.jpg`}
               alt={data.titre}
+              maxH="150px"
             />
 
             <Text
