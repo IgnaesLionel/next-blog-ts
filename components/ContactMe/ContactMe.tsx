@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
-
+import Link from "next/link";
 const ContactMe = () => {
-  const bgColor = useColorModeValue("#50a0eb", "#04346a");
   return (
     <div>
       <Box
@@ -13,9 +12,13 @@ const ContactMe = () => {
         alignItems="center"
       >
         Interested in working together ?
-        <Button ml="20px" colorScheme="messenger" size="sm">
-          contact me !
-        </Button>
+        <Link href="/contact">
+          <a>
+            <Button ml="20px" colorScheme="messenger" size="sm">
+              contact me !
+            </Button>
+          </a>
+        </Link>
       </Box>
     </div>
   );

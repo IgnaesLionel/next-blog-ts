@@ -42,6 +42,13 @@ const NavBar = ({ children }) => {
               </Text>
             </a>
           </Link>
+          <Link href="/contact">
+            <a>
+              <Text color={textColor} fontSize="15px">
+                Contact
+              </Text>
+            </a>
+          </Link>
         </HStack>
         {children}
       </nav>

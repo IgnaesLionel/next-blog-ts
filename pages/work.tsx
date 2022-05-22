@@ -21,7 +21,6 @@ export default function Work({
   }[];
   host: string;
 }) {
-  const bgColor = useColorModeValue("#50a0eb", "#04346a");
   const txtColor = useColorModeValue("#010101", "#b4ddff");
   return (
     <Box className="mainBackground" color={txtColor}>
