@@ -15,14 +15,31 @@ const ContactByMail = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isVerified, setIsverified] = useState(false);
-  const [showButton, setShowButton] = useState(true);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    if (window.localStorage.getItem("sendedMessage") !== null) {
+      timer20();
+    } else {
+      setShowButton(true);
+    }
+  }, []);
 
   const waitBeforeReSendMessage = () => {
     setShowButton(false);
+    window.localStorage.setItem("sendedMessage", "sended");
+    timer20();
+    return () => clearTimeout(waitBeforeReSendMessage);
+  };
+
+  const timer20 = () => {
+    console.log("timer commencé");
     setTimeout(() => {
+      console.log("timer fini");
+      window.localStorage.removeItem("sendedMessage");
       setShowButton(true);
     }, 20000);
-    return () => clearTimeout(waitBeforeReSendMessage);
+    return () => clearTimeout(timer);
   };
 
   const handleClick = (e) => {
