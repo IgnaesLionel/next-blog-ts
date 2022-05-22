@@ -36,45 +36,52 @@ const MyBlogCard = ({
       justifyContent="space-around"
     >
       <Link href={`/blog/${data.url}`}>
-        <Box
-          p={["15px", "20px", "20px"]}
-          w="full"
-          maxW="320px"
-          minH="300px"
-          borderWidth="2px"
-          borderRadius="10px"
-          bg={"whiteAlpha.300"}
-          color={textColor}
-          display="flex"
-          flexDirection="column"
-          flexGrow={1}
-          justifyContent="space-around"
-          mr="10px"
-          mb="10px"
-        >
-          <small>
-            <Date dateString={data.date} />
-          </small>
-          <Image
-            m="auto"
-            borderRadius="md"
-            maxH="150px"
-            src={`${host}assets/${data.Preview}.jpg`}
-            alt={data.titre}
-          />
-
-          <Text
-            mt={2}
-            fontSize={["15px", "16px", "18px"]}
-            fontWeight="semibold"
-            lineHeight="short"
+        <a>
+          <Box
+            p={["15px", "20px", "20px"]}
+            w="full"
+            maxW="320px"
+            minH="300px"
+            borderWidth="2px"
+            borderRadius="10px"
+            bg={"whiteAlpha.300"}
+            color={textColor}
+            display="flex"
+            flexDirection="column"
+            flexGrow={1}
+            justifyContent="space-around"
+            mr="10px"
+            mb="10px"
           >
-            {data.titre}
-          </Text>
-          <Text mt={2} fontSize="15px" fontWeight="semibold" lineHeight="short">
-            {slicedMarkup}
-          </Text>
-        </Box>
+            <small>
+              <Date dateString={data.date} />
+            </small>
+            <Image
+              m="auto"
+              borderRadius="md"
+              maxH="150px"
+              src={`${host}assets/${data.Preview}.jpg`}
+              alt={data.titre}
+            />
+
+            <Text
+              mt={2}
+              fontSize={["15px", "16px", "18px"]}
+              fontWeight="semibold"
+              lineHeight="short"
+            >
+              {data.titre}
+            </Text>
+            <Text
+              mt={2}
+              fontSize="15px"
+              fontWeight="semibold"
+              lineHeight="short"
+            >
+              {slicedMarkup}
+            </Text>
+          </Box>
+        </a>
       </Link>
     </Box>
   );

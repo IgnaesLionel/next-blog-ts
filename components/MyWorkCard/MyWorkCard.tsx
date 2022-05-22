@@ -27,36 +27,38 @@ const MyWorkCard = ({
       justifyContent="space-around"
     >
       <Link href={`/work/${data.url}`}>
-        <Box
-          p="2"
-          maxW="320px"
-          borderWidth="2px"
-          borderRadius="10px"
-          w="full"
-          bg={"whiteAlpha.300"}
-          display="flex"
-          flexDirection="column"
-          flexGrow={1}
-          justifyContent="space-around"
-          mr="10px"
-          mb="10px"
-        >
-          <Image
-            borderRadius="md"
-            src={`${host}assets/${data.image}.jpg`}
-            alt={data.titre}
-          />
-
-          <Text
-            mt={2}
-            pl="5px"
-            fontSize={["15px", "16px", "18px"]}
-            fontWeight="semibold"
-            lineHeight="short"
+        <a>
+          <Box
+            p="2"
+            maxW="320px"
+            borderWidth="2px"
+            borderRadius="10px"
+            w="full"
+            bg={"whiteAlpha.300"}
+            display="flex"
+            flexDirection="column"
+            flexGrow={1}
+            justifyContent="space-around"
+            mr="10px"
+            mb="10px"
           >
-            {data.titre}
-          </Text>
-        </Box>
+            <Image
+              borderRadius="md"
+              src={`${host}assets/${data.image}.jpg`}
+              alt={data.titre}
+            />
+
+            <Text
+              mt={2}
+              pl="5px"
+              fontSize={["15px", "16px", "18px"]}
+              fontWeight="semibold"
+              lineHeight="short"
+            >
+              {data.titre}
+            </Text>
+          </Box>
+        </a>
       </Link>
     </Box>
   );
