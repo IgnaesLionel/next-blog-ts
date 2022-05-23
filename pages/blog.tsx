@@ -35,7 +35,7 @@ export default function Blog({
     <Box className="mainBackground" minH={"70vh"}>
       <Layout home>
         <Head>
-          <title>{siteTitle}</title>
+          <title>{siteTitle} blog</title>
         </Head>
 
         <Text

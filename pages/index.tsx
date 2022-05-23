@@ -52,7 +52,7 @@ export default function Home({
     <Box position="relative" className="mainBackground">
       <Layout home>
         <Head>
-          <title>{siteTitle}</title>
+          <title>{siteTitle} Portfolio</title>
         </Head>
         <Header />
 

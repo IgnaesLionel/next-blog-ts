@@ -25,7 +25,7 @@ export default function Post({
   return (
     <Layout>
       <Head>
-        <title> {data.titre} </title>
+        <title> {data.titre}</title>
       </Head>
 
       <article>

@@ -17,7 +17,7 @@ const about = () => {
     <Box className="mainBackground" color={txtColor}>
       <Layout home>
         <Head>
-          <title>{siteTitle}</title>
+          <title>{siteTitle} about</title>
         </Head>
         <Box minH={"70vh"}>
           <Text

@@ -27,7 +27,7 @@ export default function Work({
       <Layout home>
         <Box minH={"70vh"}>
           <Head>
-            <title>{siteTitle}</title>
+            <title>{siteTitle} work</title>
           </Head>
           <Text
             as="h2"

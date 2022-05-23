@@ -18,7 +18,7 @@ const contact = () => {
     <Box className="mainBackground" color={txtColor}>
       <Layout home>
         <Head>
-          <title>{siteTitle}</title>
+          <title>{siteTitle} contact</title>
         </Head>
         <Box minH={"70vh"}>
           <Text
