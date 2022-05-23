@@ -5,8 +5,6 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import NavBar from "../components/NavBar/NavBar";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const config = { useSystemColorMode: true, initialColorMode: "dark" };
-
   const theme = {
     styles: {
       global: {
@@ -81,7 +79,6 @@ export default function App({ Component, pageProps }: AppProps) {
           padding: "0.5em 10px 0.5em 10px",
         },
       },
-      ...config,
     },
   };
 
