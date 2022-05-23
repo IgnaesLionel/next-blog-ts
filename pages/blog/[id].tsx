@@ -23,59 +23,61 @@ export default function Post({
   };
 }) {
   return (
-    <Layout>
-      <Head>
-        <title> {data.titre}</title>
-      </Head>
+    <Box className="mainBackground" pt="1px" minHeight="150vh">
+      <Layout>
+        <Head>
+          <title> {data.titre}</title>
+        </Head>
 
-      <article className="mainBackground">
-        <Center h="100px" color="white">
-          <Heading as="h1" size="2xl">
-            {data.titre}
-          </Heading>
-        </Center>
-        <div className={utilStyles.lightText}>
-          <Date dateString={data.date} />
-        </div>
-        <Box pl="50px" mt="50px">
-          {data.markup_1 ? <Markdown>{data.markup_1}</Markdown> : null}
-        </Box>
-        <Box pl="90px" pr="90px">
-          {data.code_1 ? (
+        <article>
+          <Center h="100px" color="white">
+            <Heading as="h1" size="2xl">
+              {data.titre}
+            </Heading>
+          </Center>
+          <div className={utilStyles.lightText}>
+            <Date dateString={data.date} />
+          </div>
+          <Box pl="50px" mt="50px">
+            {data.markup_1 ? <Markdown>{data.markup_1}</Markdown> : null}
+          </Box>
+          <Box pl="90px" pr="90px">
+            {data.code_1 ? (
+              <pre className="codePrism">
+                <CodeComponent code={data.code_1} language="javascript" />
+              </pre>
+            ) : null}
+          </Box>
+          <Box pl="50px">
+            {data.markup_2 ? <Markdown>{data.markup_2}</Markdown> : null}
+          </Box>
+          {data.code_2 ? (
             <pre className="codePrism">
-              <CodeComponent code={data.code_1} language="javascript" />
+              <CodeComponent code={data.code_2} language="javascript" />
             </pre>
           ) : null}
-        </Box>
-        <Box pl="50px">
-          {data.markup_2 ? <Markdown>{data.markup_2}</Markdown> : null}
-        </Box>
-        {data.code_2 ? (
-          <pre className="codePrism">
-            <CodeComponent code={data.code_2} language="javascript" />
-          </pre>
-        ) : null}
-        <Box pl="50px">
-          {data.markup_3 ? <Markdown>{data.markup_3}</Markdown> : null}
-        </Box>
-        {data.code_3 ? (
-          <pre className="codePrism">
-            <CodeComponent code={data.code_3} language="javascript" />
-          </pre>
-        ) : null}
-      </article>
-      <Flex w="100%" justifyContent="center">
-        <Button colorScheme={"messenger"}>
-          <Link href={"/blog"}>
-            <a>
-              <Text fontSize="15px" color="black">
-                back
-              </Text>
-            </a>
-          </Link>
-        </Button>
-      </Flex>
-    </Layout>
+          <Box pl="50px">
+            {data.markup_3 ? <Markdown>{data.markup_3}</Markdown> : null}
+          </Box>
+          {data.code_3 ? (
+            <pre className="codePrism">
+              <CodeComponent code={data.code_3} language="javascript" />
+            </pre>
+          ) : null}
+        </article>
+        <Flex w="100%" justifyContent="center">
+          <Button colorScheme={"messenger"}>
+            <Link href={"/blog"}>
+              <a>
+                <Text fontSize="15px" color="black">
+                  back
+                </Text>
+              </a>
+            </Link>
+          </Button>
+        </Flex>
+      </Layout>
+    </Box>
   );
 }
 
