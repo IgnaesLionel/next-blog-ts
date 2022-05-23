@@ -149,7 +149,3 @@ const ContactByMail = () => {
 };
 
 export default ContactByMail;
-/* 
-
-
- */
