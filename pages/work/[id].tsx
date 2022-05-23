@@ -34,12 +34,12 @@ export default function Post({
       <Layout>
         <div>
           <Head>
-            <title> Projet : {data.titre} </title>
+            <title> Projet {data.titre} </title>
           </Head>
 
           <article>
             <Heading as="h1" className={utilStyles.headingXl} pl="30px">
-              Projet : {data.titre}
+              Projet {data.titre}
             </Heading>
 
             <Box margin="0 auto" w="80%">

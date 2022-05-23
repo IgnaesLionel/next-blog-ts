@@ -28,7 +28,7 @@ export default function Post({
         <title> {data.titre}</title>
       </Head>
 
-      <article>
+      <article className="mainBackground">
         <Center h="100px" color="white">
           <Heading as="h1" size="2xl">
             {data.titre}
