@@ -35,7 +35,7 @@ export default function Post({
               {data.titre}
             </Heading>
           </Center>
-          <div className={utilStyles.lightText}>
+          <div className={`${utilStyles.paddingLeft}`}>
             <Date dateString={data.date} />
           </div>
           <Box pl="50px" mt="50px">
@@ -51,19 +51,23 @@ export default function Post({
           <Box pl="50px">
             {data.markup_2 ? <Markdown>{data.markup_2}</Markdown> : null}
           </Box>
-          {data.code_2 ? (
-            <pre className="codePrism">
-              <CodeComponent code={data.code_2} language="javascript" />
-            </pre>
-          ) : null}
+          <Box pl="90px" pr="90px">
+            {data.code_2 ? (
+              <pre className="codePrism">
+                <CodeComponent code={data.code_2} language="javascript" />
+              </pre>
+            ) : null}
+          </Box>
           <Box pl="50px">
             {data.markup_3 ? <Markdown>{data.markup_3}</Markdown> : null}
           </Box>
-          {data.code_3 ? (
-            <pre className="codePrism">
-              <CodeComponent code={data.code_3} language="javascript" />
-            </pre>
-          ) : null}
+          <Box pl="90px" pr="90px">
+            {data.code_3 ? (
+              <pre className="codePrism">
+                <CodeComponent code={data.code_3} language="javascript" />
+              </pre>
+            ) : null}
+          </Box>
         </article>
         <Flex w="100%" justifyContent="center">
           <Button colorScheme={"messenger"}>
